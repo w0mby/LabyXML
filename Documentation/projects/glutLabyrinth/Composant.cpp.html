@@ -1,0 +1,53 @@
+<HTML>
+<HEAD>
+<TITLE>
+Composant.cpp
+</TITLE>
+</HEAD>
+<BODY>
+<PRE>
+<font color="blue">#include</font> <font color="maroon">"Composant.h"</font>
+
+Composant<font color="black">:</font><font color="black">:</font>Composant<font color="black">(</font>TiXmlElement<font color="black">*</font> _elements,Vertex _posElement, MapModele<font color="black">&</font> _modeles, MapTex<font color="black">&</font> textures<font color="black">)</font><font color="black">{</font>
+     posElement <font color="black">=</font> _posElement;
+     Vertex posRelComposant;
+     TiXmlElement<font color="black">*</font> elem;
+     elem <font color="black">=</font> _elements<font color="black">-</font><font color="black">&#62;</font>FirstChildElement<font color="black">(</font><font color="maroon">"bloc"</font><font color="black">)</font>;
+      <font color="blue">while</font> <font color="black">(</font>elem<font color="black">)</font>
+      <font color="black">{</font>
+           elem<font color="black">-</font><font color="black">&#62;</font>QueryFloatAttribute<font color="black">(</font><font color="maroon">"x"</font>,<font color="black">&</font>posRelComposant.x<font color="black">)</font>;
+           elem<font color="black">-</font><font color="black">&#62;</font>QueryFloatAttribute<font color="black">(</font><font color="maroon">"y"</font>,<font color="black">&</font>posRelComposant.y<font color="black">)</font>;
+           elem<font color="black">-</font><font color="black">&#62;</font>QueryFloatAttribute<font color="black">(</font><font color="maroon">"z"</font>,<font color="black">&</font>posRelComposant.z<font color="black">)</font>;
+           elements.push_back<font color="black">(</font>Bloc<font color="black">(</font>elem,posRelComposant,_modeles,textures<font color="black">)</font><font color="black">)</font>;                
+           elem <font color="black">=</font> elem<font color="black">-</font><font color="black">&#62;</font>NextSiblingElement<font color="black">(</font><font color="maroon">"bloc"</font><font color="black">)</font>; <font color="green">// iteration</font>
+       <font color="black">}</font>
+<font color="black">}</font>
+
+<font color="blue">void</font> Composant<font color="black">:</font><font color="black">:</font>draw<font color="black">(</font>Vertex posPerso,Vertex posVue<font color="black">)</font> <font color="black">{</font>                       
+     <font color="blue">for</font> <font color="black">(</font><font color="blue">int</font> i<font color="black">=</font><font color="maroon">0</font>;i<font color="black">&#60;</font>elements.size<font color="black">(</font><font color="black">)</font>;i<font color="black">+</font><font color="black">+</font><font color="black">)</font> <font color="black">{</font>
+         glLoadIdentity<font color="black">(</font><font color="black">)</font>;  
+         gluLookAt <font color="black">(</font>posPerso.x,posPerso.y,posPerso.z,posVue.x,posVue.y,posVue.z,<font color="maroon">0</font>,<font color="maroon">1</font>,<font color="maroon">0</font><font color="black">)</font>; 
+         glTranslatef<font color="black">(</font>posElement.x,posElement.y,posElement.z<font color="black">)</font>;
+         <font color="blue">if</font><font color="black">(</font><font color="black">!</font><font color="black">(</font><font color="black">(</font>posElement.x <font color="black">+</font> elements<font color="black">[</font>i<font color="black">]</font>.getPos<font color="black">(</font><font color="black">)</font>.x<font color="black">)</font> <font color="black">&#62;</font> <font color="black">(</font>posPerso.x <font color="black">+</font> <font color="maroon">20</font><font color="black">)</font> <font color="black">|</font><font color="black">|</font>
+            <font color="black">(</font>posElement.x <font color="black">+</font> elements<font color="black">[</font>i<font color="black">]</font>.getPos<font color="black">(</font><font color="black">)</font>.x<font color="black">)</font> <font color="black">&#60;</font> <font color="black">(</font>posPerso.x <font color="maroon">-20</font><font color="black">)</font> <font color="black">|</font><font color="black">|</font>
+            <font color="black">(</font>posElement.z <font color="black">+</font> elements<font color="black">[</font>i<font color="black">]</font>.getPos<font color="black">(</font><font color="black">)</font>.z<font color="black">)</font> <font color="black">&#62;</font> <font color="black">(</font>posPerso.z <font color="black">+</font> <font color="maroon">20</font><font color="black">)</font> <font color="black">|</font><font color="black">|</font>
+            <font color="black">(</font>posElement.z <font color="black">+</font> elements<font color="black">[</font>i<font color="black">]</font>.getPos<font color="black">(</font><font color="black">)</font>.z<font color="black">)</font> <font color="black">&#60;</font> <font color="black">(</font>posPerso.z <font color="maroon">-20</font><font color="black">)</font> <font color="black">)</font> <font color="black">)</font><font color="black">{</font>
+              elements<font color="black">[</font>i<font color="black">]</font>.draw<font color="black">(</font><font color="black">)</font>;    
+         <font color="black">}</font>
+     <font color="black">}</font>             
+<font color="black">}</font>
+
+<font color="blue">bool</font> Composant<font color="black">:</font><font color="black">:</font>estIn<font color="black">(</font>Vertex posJoueur<font color="black">)</font><font color="black">{</font>
+     posJoueur.x <font color="black">-</font><font color="black">=</font> posElement.x;
+     posJoueur.z <font color="black">-</font><font color="black">=</font> posElement.z;
+     <font color="blue">for</font> <font color="black">(</font><font color="blue">int</font> i<font color="black">=</font><font color="maroon">0</font>;i<font color="black">&#60;</font>elements.size<font color="black">(</font><font color="black">)</font>;i<font color="black">+</font><font color="black">+</font><font color="black">)</font><font color="black">{</font>
+         <font color="blue">if</font><font color="black">(</font>elements<font color="black">[</font>i<font color="black">]</font>.estIn<font color="black">(</font>posJoueur<font color="black">)</font><font color="black">)</font><font color="black">{</font>
+                   <font color="blue">return</font> <font color="blue">true</font>;
+         <font color="black">}</font>                     
+     <font color="black">}</font> 
+     <font color="blue">return</font> <font color="blue">false</font>;
+<font color="black">}</font>
+
+</PRE>
+</BODY>
+</HTML>

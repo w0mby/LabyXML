@@ -1,0 +1,236 @@
+<HTML>
+<HEAD>
+<TITLE>
+Controleur.cpp
+</TITLE>
+</HEAD>
+<BODY>
+<PRE>
+<font color="blue">#include</font> <font color="maroon">"Controleur.h"</font>
+
+<font color="blue">#include</font> <font color="maroon">&#60;cstdio&#62;</font>
+<font color="blue">#include</font> <font color="maroon">&#60;cmath&#62;</font>
+
+Controleur<font color="black">:</font><font color="black">:</font>Controleur<font color="black">(</font><font color="blue">char</font> <font color="black">*</font> monde,<font color="blue">int</font> _hauteurEcran,<font color="blue">int</font> _largeurEcran<font color="black">)</font> <font color="black">{</font>
+    MapTex maptex <font color="black">=</font> LoadGLTextures<font color="black">(</font><font color="black">)</font>;
+    MapModele mapmod <font color="black">=</font> LoadGLModels<font color="black">(</font><font color="black">)</font>;
+    laby <font color="black">=</font> <font color="blue">new</font> Labyrinthe<font color="black">(</font>monde,mapmod,maptex<font color="black">)</font>;
+    posJoueur.x <font color="black">=</font> <font color="maroon">2</font>;
+    posJoueur.y <font color="black">=</font> <font color="maroon">0</font>.<font color="maroon">5</font> ;
+    posJoueur.z <font color="black">=</font> <font color="maroon">0</font>;
+    posVue.x <font color="black">=</font> <font color="maroon">-2</font>;    
+    posVue.y <font color="black">=</font> <font color="maroon">0</font>; 
+    posVue.z <font color="black">=</font> <font color="maroon">0</font>;   
+    hauteurEcran <font color="black">=</font> _hauteurEcran;
+    largeurEcran <font color="black">=</font> _largeurEcran;
+    degVue <font color="black">=</font> <font color="maroon">90</font>.0f;
+    freinJoueur <font color="black">=</font> <font color="maroon">6</font>;
+
+        
+    <font color="blue">for</font><font color="black">(</font><font color="blue">int</font> i <font color="black">=</font> <font color="maroon">0</font>; i <font color="black">&#60;</font> <font color="maroon">256</font>;i<font color="black">+</font><font color="black">+</font><font color="black">)</font> <font color="black">{</font>
+            keys<font color="black">[</font>i<font color="black">]</font> <font color="black">=</font> <font color="blue">false</font>;
+    <font color="black">}</font>                          
+<font color="black">}</font>  
+
+<font color="blue">void</font> Controleur<font color="black">:</font><font color="black">:</font>resize<font color="black">(</font><font color="blue">int</font> width, <font color="blue">int</font> height<font color="black">)</font><font color="black">{</font>
+    glViewport<font color="black">(</font><font color="maroon">0</font>, <font color="maroon">0</font>, width, height<font color="black">)</font>;
+    glMatrixMode<font color="black">(</font>GL_PROJECTION<font color="black">)</font>;
+    glLoadIdentity<font color="black">(</font><font color="black">)</font>;
+    gluPerspective<font color="black">(</font><font color="maroon">45</font>.0f,<font color="black">(</font>GLfloat<font color="black">)</font>width<font color="black">/</font><font color="black">(</font>GLfloat<font color="black">)</font>height,<font color="maroon">0</font>.1f,<font color="maroon">100</font>.0f<font color="black">)</font>;
+    glMatrixMode<font color="black">(</font>GL_MODELVIEW<font color="black">)</font>;
+    glLoadIdentity<font color="black">(</font><font color="black">)</font>;
+<font color="black">}</font>
+
+<font color="blue">void</font> Controleur<font color="black">:</font><font color="black">:</font>display<font color="black">(</font><font color="blue">void</font><font color="black">)</font><font color="black">{</font>
+     glClear<font color="black">(</font>GL_COLOR_BUFFER_BIT <font color="black">|</font> GL_DEPTH_BUFFER_BIT<font color="black">)</font>; 
+     laby<font color="black">-</font><font color="black">&#62;</font>draw<font color="black">(</font>posJoueur,posVue<font color="black">)</font>;
+     glutSwapBuffers<font color="black">(</font><font color="black">)</font>;
+<font color="black">}</font>
+
+<font color="blue">void</font> Controleur<font color="black">:</font><font color="black">:</font>keyboardUp<font color="black">(</font><font color="blue">unsigned</font> <font color="blue">char</font> key, <font color="blue">int</font> x, <font color="blue">int</font> y<font color="black">)</font><font color="black">{</font>
+     keys<font color="black">[</font>key<font color="black">]</font> <font color="black">=</font> <font color="blue">false</font>;      
+<font color="black">}</font>
+<font color="blue">void</font> Controleur<font color="black">:</font><font color="black">:</font>keyboard<font color="black">(</font><font color="blue">unsigned</font> <font color="blue">char</font> key, <font color="blue">int</font> x, <font color="blue">int</font> y<font color="black">)</font><font color="black">{</font>
+     keys<font color="black">[</font>key<font color="black">]</font> <font color="black">=</font> <font color="blue">true</font>; 
+<font color="black">}</font>
+
+<font color="blue">void</font> Controleur<font color="black">:</font><font color="black">:</font>mouseMove<font color="black">(</font><font color="blue">int</font> x, <font color="blue">int</font> y<font color="black">)</font> <font color="black">{</font>    
+     <font color="blue">static</font> <font color="blue">int</font> mousePrcdX <font color="black">=</font> <font color="maroon">-1</font>;
+     <font color="blue">static</font> <font color="blue">int</font> mousePrcdY <font color="black">=</font> <font color="maroon">-1</font>;
+     <font color="blue">float</font>  deplacementVueY <font color="black">=</font> <font color="maroon">0</font>.0f; 
+     <font color="blue">if</font> <font color="black">(</font> mousePrcdX <font color="black">!</font><font color="black">=</font> <font color="maroon">-1</font><font color="black">)</font> <font color="black">{</font>
+           degVue <font color="black">+</font><font color="black">=</font> <font color="black">(</font><font color="black">(</font><font color="blue">float</font><font color="black">)</font><font color="black">(</font>mousePrcdX <font color="black">-</font>x<font color="black">)</font><font color="black">)</font> <font color="black">/</font><font color="maroon">10</font>;
+           deplacementVueY <font color="black">=</font> y <font color="black">-</font>mousePrcdY;
+     <font color="black">}</font>
+     calculerPosVue<font color="black">(</font><font color="black">)</font>; 
+     posVue.y <font color="black">-</font><font color="black">=</font> tan<font color="black">(</font> deplacementVueY <font color="black">*</font> rapportRadian <font color="black">)</font>; 
+     <font color="blue">if</font><font color="black">(</font>posVue.y <font color="black">&#62;</font> <font color="maroon">9</font><font color="black">)</font> posVue.y <font color="black">=</font> <font color="maroon">9</font>;
+     <font color="blue">if</font><font color="black">(</font>posVue.y <font color="black">&#60;</font> <font color="maroon">-9</font><font color="black">)</font> posVue.y <font color="black">=</font> <font color="maroon">-9</font>;
+    
+     mousePrcdX <font color="black">=</font> x;
+     mousePrcdY <font color="black">=</font> y; 
+      
+     <font color="blue">if</font> <font color="black">(</font> x <font color="black">&#62;</font> largeurEcran<font color="maroon">-200</font> <font color="black">|</font><font color="black">|</font> x <font color="black">&#60;</font> <font color="maroon">200</font> <font color="black">|</font><font color="black">|</font> y <font color="black">&#62;</font> hauteurEcran<font color="maroon">-200</font> <font color="black">|</font><font color="black">|</font>y <font color="black">&#60;</font> <font color="maroon">200</font> <font color="black">)</font> <font color="black">{</font>
+        DestroyCursor<font color="black">(</font>GetCursor<font color="black">(</font><font color="black">)</font><font color="black">)</font>;
+        SetCursorPos<font color="black">(</font>largeurEcran<font color="black">/</font><font color="maroon">2</font>,hauteurEcran<font color="black">/</font><font color="maroon">2</font><font color="black">)</font>;
+        mousePrcdX <font color="black">=</font> <font color="maroon">-1</font>;
+        mousePrcdY <font color="black">=</font> <font color="maroon">-1</font>;
+     <font color="black">}</font>
+       
+<font color="black">}</font>
+
+<font color="blue">void</font> Controleur<font color="black">:</font><font color="black">:</font>idle<font color="black">(</font><font color="blue">void</font><font color="black">)</font><font color="black">{</font>
+     glutPostRedisplay<font color="black">(</font><font color="black">)</font>;
+<font color="black">}</font>
+
+<font color="blue">void</font> Controleur<font color="black">:</font><font color="black">:</font>timer<font color="black">(</font><font color="blue">int</font> value<font color="black">)</font> <font color="black">{</font>
+     postChange<font color="black">(</font><font color="black">)</font>;     
+<font color="black">}</font>
+
+<font color="blue">void</font> Controleur<font color="black">:</font><font color="black">:</font>postChange<font color="black">(</font><font color="black">)</font> <font color="black">{</font>
+     <font color="blue">if</font><font color="black">(</font>keys<font color="black">[</font><font color="maroon">'z'</font><font color="black">]</font><font color="black">)</font> <font color="black">{</font> 
+       <font color="blue">if</font> <font color="black">(</font> laby<font color="black">-</font><font color="black">&#62;</font>estIn<font color="black">(</font> Vertex<font color="black">(</font> <font color="black">(</font>posJoueur.x <font color="black">+</font> <font color="black">(</font>sin<font color="black">(</font>degVue <font color="black">*</font> rapportRadian<font color="black">)</font> <font color="black">)</font><font color="black">)</font> , <font color="maroon">1</font> ,<font color="black">(</font>posJoueur.z <font color="black">+</font> <font color="black">(</font>cos<font color="black">(</font>degVue <font color="black">*</font> rapportRadian<font color="black">)</font><font color="black">)</font><font color="black">)</font> <font color="black">)</font> <font color="black">)</font> <font color="black">)</font> <font color="black">{</font> <font color="green">// detection de la colision</font>
+                          posJoueur.x <font color="black">+</font><font color="black">=</font> sin<font color="black">(</font>degVue <font color="black">*</font> rapportRadian<font color="black">)</font><font color="black">/</font>freinJoueur ;
+                          posJoueur.z <font color="black">+</font><font color="black">=</font> cos<font color="black">(</font>degVue <font color="black">*</font> rapportRadian<font color="black">)</font><font color="black">/</font>freinJoueur ;
+                          calculerPosVue<font color="black">(</font><font color="black">)</font>; 
+       <font color="black">}</font>         
+     <font color="black">}</font>
+     <font color="blue">if</font><font color="black">(</font>keys<font color="black">[</font><font color="maroon">'s'</font><font color="black">]</font><font color="black">)</font> <font color="black">{</font>
+       <font color="blue">if</font> <font color="black">(</font> laby<font color="black">-</font><font color="black">&#62;</font>estIn<font color="black">(</font> Vertex<font color="black">(</font> <font color="black">(</font>posJoueur.x <font color="black">-</font><font color="black">(</font>sin<font color="black">(</font>degVue <font color="black">*</font> rapportRadian<font color="black">)</font> <font color="black">)</font><font color="black">)</font> , <font color="maroon">1</font> ,<font color="black">(</font>posJoueur.z <font color="black">-</font><font color="black">(</font>cos<font color="black">(</font>degVue <font color="black">*</font> rapportRadian<font color="black">)</font><font color="black">)</font><font color="black">)</font> <font color="black">)</font> <font color="black">)</font> <font color="black">)</font> <font color="black">{</font> <font color="green">// detection de la colision</font>
+                          posJoueur.x <font color="black">-</font><font color="black">=</font> sin<font color="black">(</font>degVue <font color="black">*</font> rapportRadian<font color="black">)</font><font color="black">/</font>freinJoueur ;
+                          posJoueur.z <font color="black">-</font><font color="black">=</font> cos<font color="black">(</font>degVue <font color="black">*</font> rapportRadian<font color="black">)</font><font color="black">/</font>freinJoueur ;
+                          calculerPosVue<font color="black">(</font><font color="black">)</font>; 
+       <font color="black">}</font>  
+     <font color="black">}</font> 
+     <font color="blue">if</font> <font color="black">(</font>keys<font color="black">[</font><font color="maroon">'q'</font><font color="black">]</font> <font color="black">)</font> <font color="black">{</font>
+       <font color="blue">if</font> <font color="black">(</font> laby<font color="black">-</font><font color="black">&#62;</font>estIn<font color="black">(</font> Vertex<font color="black">(</font> <font color="black">(</font>posJoueur.x <font color="black">+</font> <font color="black">(</font>cos<font color="black">(</font>degVue <font color="black">*</font> rapportRadian<font color="black">)</font> <font color="black">)</font><font color="black">)</font> , <font color="maroon">1</font> ,<font color="black">(</font>posJoueur.z <font color="black">-</font><font color="black">(</font>sin<font color="black">(</font>degVue <font color="black">*</font> rapportRadian<font color="black">)</font><font color="black">)</font><font color="black">)</font> <font color="black">)</font> <font color="black">)</font> <font color="black">)</font> <font color="black">{</font> <font color="green">// detection de la colision</font>
+                          posJoueur.x <font color="black">+</font><font color="black">=</font> cos<font color="black">(</font>degVue <font color="black">*</font> rapportRadian<font color="black">)</font><font color="black">/</font>freinJoueur ;
+                          posJoueur.z <font color="black">-</font><font color="black">=</font> sin<font color="black">(</font>degVue <font color="black">*</font> rapportRadian<font color="black">)</font><font color="black">/</font>freinJoueur ;
+                          calculerPosVue<font color="black">(</font><font color="black">)</font>; 
+       <font color="black">}</font>      
+     
+     <font color="black">}</font>
+     <font color="blue">if</font> <font color="black">(</font>keys<font color="black">[</font><font color="maroon">'d'</font><font color="black">]</font> <font color="black">)</font> <font color="black">{</font>
+        <font color="blue">if</font> <font color="black">(</font> laby<font color="black">-</font><font color="black">&#62;</font>estIn<font color="black">(</font> Vertex<font color="black">(</font> <font color="black">(</font>posJoueur.x <font color="black">-</font><font color="black">(</font>cos<font color="black">(</font>degVue <font color="black">*</font> rapportRadian<font color="black">)</font> <font color="black">)</font><font color="black">)</font> , <font color="maroon">1</font> ,<font color="black">(</font>posJoueur.z <font color="black">+</font> <font color="black">(</font>sin<font color="black">(</font>degVue <font color="black">*</font> rapportRadian<font color="black">)</font><font color="black">)</font><font color="black">)</font> <font color="black">)</font> <font color="black">)</font> <font color="black">)</font> <font color="black">{</font> <font color="green">// detection de la colision</font>
+                          posJoueur.x <font color="black">-</font><font color="black">=</font> cos<font color="black">(</font>degVue <font color="black">*</font> rapportRadian<font color="black">)</font><font color="black">/</font>freinJoueur ;
+                          posJoueur.z <font color="black">+</font><font color="black">=</font> sin<font color="black">(</font>degVue <font color="black">*</font> rapportRadian<font color="black">)</font><font color="black">/</font>freinJoueur ;
+                          calculerPosVue<font color="black">(</font><font color="black">)</font>; 
+       <font color="black">}</font>   
+     
+     <font color="black">}</font>
+     
+     <font color="blue">if</font><font color="black">(</font>keys<font color="black">[</font><font color="maroon">'+'</font><font color="black">]</font><font color="black">)</font> <font color="black">{</font>
+       <font color="blue">if</font> <font color="black">(</font> freinJoueur <font color="black">&#62;</font> <font color="maroon">6</font> <font color="black">)</font> freinJoueur<font color="black">-</font><font color="black">-</font>;
+     <font color="black">}</font>
+     
+     <font color="blue">if</font><font color="black">(</font>keys<font color="black">[</font><font color="maroon">'-'</font><font color="black">]</font><font color="black">)</font> <font color="black">{</font>
+       freinJoueur<font color="black">+</font><font color="black">+</font>;
+     <font color="black">}</font>
+     
+     <font color="blue">if</font><font color="black">(</font>keys<font color="black">[</font><font color="maroon">27</font><font color="black">]</font><font color="black">)</font> <font color="black">{</font> <font color="green">// le code de la touche escape</font>
+       <font color="blue">delete</font> laby;
+       exit<font color="black">(</font><font color="maroon">0</font><font color="black">)</font>;
+     <font color="black">}</font>     
+<font color="black">}</font>
+
+<font color="blue">void</font> Controleur<font color="black">:</font><font color="black">:</font>calculerPosVue<font color="black">(</font><font color="black">)</font> <font color="black">{</font>
+    posVue.x <font color="black">=</font> posJoueur.x<font color="black">+</font><font color="black">(</font>sin<font color="black">(</font>degVue <font color="black">*</font> rapportRadian <font color="black">)</font> <font color="black">*</font> <font color="maroon">5</font><font color="black">)</font>;
+    posVue.z <font color="black">=</font> posJoueur.z<font color="black">+</font><font color="black">(</font>cos<font color="black">(</font>degVue <font color="black">*</font> rapportRadian <font color="black">)</font><font color="black">*</font> <font color="maroon">5</font><font color="black">)</font>;  
+<font color="black">}</font>
+
+MapTex Controleur<font color="black">:</font><font color="black">:</font>LoadGLTextures<font color="black">(</font><font color="black">)</font><font color="black">{</font>
+    MapTex mapTex;    
+    WIN32_FIND_DATA File;
+    HANDLE hSearch;
+    Image imageBmp;
+    <font color="blue">bool</font> re <font color="black">=</font> <font color="blue">true</font>;
+    <font color="blue">int</font> i <font color="black">=</font> <font color="maroon">0</font>;
+    hSearch<font color="black">=</font>FindFirstFile<font color="black">(</font><font color="maroon">"Data/*.bmp"</font>, <font color="black">&</font>File<font color="black">)</font>;
+    <font color="blue">do</font><font color="black">{</font>
+       string path  <font color="black">=</font> <font color="maroon">"Data/"</font>;
+       path <font color="black">+</font><font color="black">=</font> File.cFileName;    
+       ImageLoad<font color="black">(</font><font color="black">(</font><font color="blue">char</font><font color="black">*</font><font color="black">)</font>path.c_str<font color="black">(</font><font color="black">)</font>,<font color="black">&</font>imageBmp<font color="black">)</font>; 
+       string nom<font color="black">(</font>File.cFileName<font color="black">)</font>;
+       GLuint texture;
+       glGenTextures<font color="black">(</font><font color="maroon">1</font>, <font color="black">&</font>texture<font color="black">)</font>;
+       glBindTexture<font color="black">(</font>GL_TEXTURE_2D, texture<font color="black">)</font>;
+       mapTex.insert<font color="black">(</font>PaireTex<font color="black">(</font>nom,texture<font color="black">)</font><font color="black">)</font>;
+       glTexParameteri<font color="black">(</font>GL_TEXTURE_2D,GL_TEXTURE_MIN_FILTER,GL_LINEAR<font color="black">)</font>;
+       glTexParameteri<font color="black">(</font>GL_TEXTURE_2D,GL_TEXTURE_MAG_FILTER,GL_LINEAR<font color="black">)</font>;
+       glTexImage2D<font color="black">(</font>GL_TEXTURE_2D, <font color="maroon">0</font>, <font color="maroon">3</font>, imageBmp.sizeX, imageBmp.sizeY, <font color="maroon">0</font>, GL_RGB, GL_UNSIGNED_BYTE, imageBmp.data<font color="black">)</font>;
+       free<font color="black">(</font>imageBmp.data<font color="black">)</font>;        <font color="green">// liberation de l'espace memoire alloué pour l'image.</font>
+     re <font color="black">=</font> FindNextFile<font color="black">(</font>hSearch, <font color="black">&</font>File<font color="black">)</font>;
+       i<font color="black">+</font><font color="black">+</font>;
+    <font color="black">}</font> 
+    <font color="blue">while</font><font color="black">(</font>re<font color="black">)</font>;
+    FindClose<font color="black">(</font>hSearch<font color="black">)</font>;
+    <font color="blue">return</font> mapTex;
+<font color="black">}</font>
+
+MapModele Controleur<font color="black">:</font><font color="black">:</font>LoadGLModels<font color="black">(</font><font color="black">)</font><font color="black">{</font>
+    MapModele mapModel;    
+    WIN32_FIND_DATA File;
+    HANDLE hSearch;
+    <font color="blue">bool</font> re <font color="black">=</font> <font color="blue">true</font>;
+    <font color="blue">int</font> i <font color="black">=</font> <font color="maroon">0</font>;
+    string dossier <font color="black">=</font><font color="maroon">"Model/"</font>;
+    string path;
+    hSearch<font color="black">=</font>FindFirstFile<font color="black">(</font><font color="maroon">"Model/*.md2"</font>, <font color="black">&</font>File<font color="black">)</font>;
+    <font color="blue">do</font><font color="black">{</font>
+       string nom <font color="black">=</font> File.cFileName;
+       path <font color="black">=</font> dossier <font color="black">+</font> nom;
+       mapModel.insert<font color="black">(</font>PaireModel<font color="black">(</font>nom,<font color="blue">new</font> Md2Object<font color="black">(</font><font color="black">(</font><font color="blue">char</font> <font color="black">*</font><font color="black">)</font>path.c_str<font color="black">(</font><font color="black">)</font><font color="black">)</font><font color="black">)</font><font color="black">)</font>;
+       re <font color="black">=</font> FindNextFile<font color="black">(</font>hSearch, <font color="black">&</font>File<font color="black">)</font>;
+    <font color="black">}</font> 
+    <font color="blue">while</font><font color="black">(</font>re<font color="black">)</font>;
+    FindClose<font color="black">(</font>hSearch<font color="black">)</font>;
+    <font color="blue">return</font> mapModel;        
+<font color="black">}</font>
+
+<font color="blue">int</font> Controleur<font color="black">:</font><font color="black">:</font>ImageLoad<font color="black">(</font><font color="blue">char</font> <font color="black">*</font>filename, Image <font color="black">*</font>image<font color="black">)</font> <font color="black">{</font>
+    FILE <font color="black">*</font>file;
+    <font color="blue">unsigned</font> <font color="blue">long</font> size; 
+    <font color="blue">unsigned</font> <font color="blue">long</font> i;    
+    <font color="blue">unsigned</font> <font color="blue">short</font> <font color="blue">int</font> planes;
+    <font color="blue">unsigned</font> <font color="blue">short</font> <font color="blue">int</font> bpp;   
+    <font color="blue">char</font> temp;          
+    file <font color="black">=</font> fopen<font color="black">(</font>filename, <font color="maroon">"rb"</font><font color="black">)</font>;
+    fseek<font color="black">(</font>file, <font color="maroon">18</font>, SEEK_CUR<font color="black">)</font>;
+    image<font color="black">-</font><font color="black">&#62;</font>sizeX <font color="black">=</font> getint <font color="black">(</font>file<font color="black">)</font>;         <font color="green">//recuperation de la largeur dans le header du fichier</font>
+    image<font color="black">-</font><font color="black">&#62;</font>sizeY <font color="black">=</font> getint <font color="black">(</font>file<font color="black">)</font>;         <font color="green">//recuperation de la longueur dans le header du fichier</font>
+    size <font color="black">=</font> image<font color="black">-</font><font color="black">&#62;</font>sizeX <font color="black">*</font> image<font color="black">-</font><font color="black">&#62;</font>sizeY <font color="black">*</font> <font color="maroon">3</font>;
+    <font color="green">// la taille de l'image se trouve dans le fichier. Seulement certains logiciel ne la mettent pas</font>
+    <font color="green">// il est donc plus sur de s'en passer d'office et de faire le calcul.</font>
+    <font color="green">// REmarque: le 3 proviens du nombre de "Composante" de la couleur. Comme on a un codage de la couleur</font>
+    <font color="green">// sous forme RGB on a donc 3 composantes.</font>
+    bpp <font color="black">=</font> getshort<font color="black">(</font>file<font color="black">)</font>; <font color="green">// recupere le nombre de bit representant une couleur.</font>
+    planes <font color="black">=</font> getshort<font color="black">(</font>file<font color="black">)</font>;
+    fseek<font color="black">(</font>file, <font color="maroon">24</font>, SEEK_CUR<font color="black">)</font>;
+    image<font color="black">-</font><font color="black">&#62;</font>data <font color="black">=</font> <font color="black">(</font><font color="blue">char</font> <font color="black">*</font><font color="black">)</font> malloc<font color="black">(</font>size<font color="black">)</font>;
+    fread<font color="black">(</font>image<font color="black">-</font><font color="black">&#62;</font>data, size, <font color="maroon">1</font>, file<font color="black">)</font>;
+    <font color="green">//La boucle suivante va permettre d'avoir a nouveau un codage RGB. En effet les fichiers bmp ont un codage des couleurs</font>
+    <font color="green">// ordonnées tel que BRG. il faut donc inverser les composantes sans quoi les couleurs seront inccorectes.</font>
+    <font color="blue">for</font> <font color="black">(</font>i<font color="black">=</font><font color="maroon">0</font>;i<font color="black">&#60;</font>size;i<font color="black">+</font><font color="black">=</font><font color="maroon">3</font><font color="black">)</font> <font color="black">{</font> 
+        temp <font color="black">=</font> image<font color="black">-</font><font color="black">&#62;</font>data<font color="black">[</font>i<font color="black">]</font>;
+        image<font color="black">-</font><font color="black">&#62;</font>data<font color="black">[</font>i<font color="black">]</font> <font color="black">=</font> image<font color="black">-</font><font color="black">&#62;</font>data<font color="black">[</font>i<font color="black">+</font><font color="maroon">2</font><font color="black">]</font>;
+        image<font color="black">-</font><font color="black">&#62;</font>data<font color="black">[</font>i<font color="black">+</font><font color="maroon">2</font><font color="black">]</font> <font color="black">=</font> temp;
+    <font color="black">}</font>
+    <font color="blue">return</font> <font color="maroon">1</font>;
+<font color="black">}</font>
+
+<font color="green">// fonctions utilisees par le loader </font>
+<font color="green">// on se deplace de char en char dans le fichier (fread,fseek,...)</font>
+<font color="green">// pour se deplacer d'un int et le recuperer on va donc se deplacer de 4 char et concatener les 4 char pour en faire un int.</font>
+<font color="blue">unsigned</font> <font color="blue">int</font> Controleur<font color="black">:</font><font color="black">:</font>getint<font color="black">(</font>FILE <font color="black">*</font>fp<font color="black">)</font> <font color="black">{</font>
+  <font color="blue">int</font> c <font color="black">=</font> getc<font color="black">(</font>fp<font color="black">)</font>, c1 <font color="black">=</font> getc<font color="black">(</font>fp<font color="black">)</font>, c2 <font color="black">=</font> getc<font color="black">(</font>fp<font color="black">)</font>, c3 <font color="black">=</font> getc<font color="black">(</font>fp<font color="black">)</font>;
+  <font color="blue">return</font> <font color="black">(</font><font color="black">(</font><font color="blue">unsigned</font> <font color="blue">int</font><font color="black">)</font> c<font color="black">)</font> <font color="black">+</font>   <font color="black">(</font><font color="black">(</font><font color="black">(</font><font color="blue">unsigned</font> <font color="blue">int</font><font color="black">)</font> c1<font color="black">)</font> <font color="black">&#60;</font><font color="black">&#60;</font> <font color="maroon">8</font><font color="black">)</font> <font color="black">+</font> <font color="black">(</font><font color="black">(</font><font color="black">(</font><font color="blue">unsigned</font> <font color="blue">int</font><font color="black">)</font> c2<font color="black">)</font> <font color="black">&#60;</font><font color="black">&#60;</font> <font color="maroon">16</font><font color="black">)</font> <font color="black">+</font><font color="black">(</font><font color="black">(</font><font color="black">(</font><font color="blue">unsigned</font> <font color="blue">int</font><font color="black">)</font> c3<font color="black">)</font> <font color="black">&#60;</font><font color="black">&#60;</font> <font color="maroon">24</font><font color="black">)</font>;
+<font color="black">}</font>
+<font color="green">// pour se deplacer d'un short et le recuperer on va donc se deplacer de 2 char et concatener les 2 char pour en faire un short.</font>
+<font color="blue">unsigned</font> <font color="blue">int</font> Controleur<font color="black">:</font><font color="black">:</font>getshort<font color="black">(</font>FILE <font color="black">*</font>fp<font color="black">)</font> <font color="black">{</font>
+  <font color="blue">int</font> c <font color="black">=</font> getc<font color="black">(</font>fp<font color="black">)</font>, c1 <font color="black">=</font> getc<font color="black">(</font>fp<font color="black">)</font>;
+  <font color="blue">return</font> <font color="black">(</font><font color="black">(</font><font color="blue">unsigned</font> <font color="blue">int</font><font color="black">)</font> c<font color="black">)</font> <font color="black">+</font> <font color="black">(</font><font color="black">(</font><font color="black">(</font><font color="blue">unsigned</font> <font color="blue">int</font><font color="black">)</font> c1<font color="black">)</font> <font color="black">&#60;</font><font color="black">&#60;</font> <font color="maroon">8</font><font color="black">)</font>;
+<font color="black">}</font>
+
+</PRE>
+</BODY>
+</HTML>

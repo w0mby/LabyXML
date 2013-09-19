@@ -1,0 +1,142 @@
+<HTML>
+<HEAD>
+<TITLE>
+Controleur.h
+</TITLE>
+</HEAD>
+<BODY>
+<PRE>
+<font color="blue">#ifndef</font> __CONTROLEUR
+<font color="blue">#define</font> __CONTROLEUR
+
+<font color="blue">#include</font> <font color="maroon">"Labyrinthe.h"</font>
+<font color="blue">#include</font> <font color="maroon">"GL/glut.h"</font>
+<font color="blue">#include</font> <font color="maroon">&#60;stdlib.h&#62;</font>
+
+<font color="blue">#define</font> PI <font color="maroon">3</font>.<font color="maroon">1415926535897932384</font>
+<font color="blue">#define</font> rapportRadian PI <font color="black">/</font> <font color="maroon">180</font>
+
+<font color="blue">typedef</font> <font color="blue">struct</font> <font color="black">{</font>
+    <font color="blue">unsigned</font> <font color="blue">long</font> sizeX;
+    <font color="blue">unsigned</font> <font color="blue">long</font> sizeY;
+    <font color="blue">char</font> <font color="black">*</font>data;
+<font color="black">}</font> Image;
+
+<font color="green">/**
+* Classe fournissant toutes les methodes permettant d'intéragir et/ou d'afficher le Labyrinthe.
+* L'interaction avec le labyrinthe est regie par les methode évenementielle fournie par la librairie glut.
+* @see &#60;a href="http://www.opengl.org/documentation/specs/glut/spec3/spec3.html"&#62;Glut&#60;/a&#62;
+* @author Damien Dormal, Bavay Jonathan & Amine Rebbouh. 
+*/</font>
+<font color="blue">class</font> Controleur <font color="black">{</font>
+      <font color="blue">private</font> <font color="black">:</font>
+              <font color="green">/** Monde dans lequel l'utilisateur va intéragir.*/</font>
+              Labyrinthe <font color="black">*</font> laby;
+              <font color="green">/** position de l'utilisateur dans le monde.*/</font>
+              Vertex posJoueur;
+              <font color="green">/** position de la vue dans le monde.*/</font>
+              Vertex posVue;
+              <font color="green">/** Angle de la vue.*/</font>
+              <font color="blue">float</font> degVue;
+              <font color="green">/** Tableau représentant les touches du clavier. si une touche est enfoncée,
+              * la cellule du tableau correspondant a son code ascii est mise à true.
+              * Lorsque la touche est relachée, la cellule correspondante est remise à false.
+              */</font>
+              <font color="blue">bool</font> keys<font color="black">[</font><font color="maroon">256</font><font color="black">]</font>;
+              <font color="green">/** Hauteur de l'écran en pixel*/</font>
+              <font color="blue">int</font> hauteurEcran;
+              <font color="green">/** Largeur de l'écran en pixel*/</font>
+              <font color="blue">int</font> largeurEcran;
+              <font color="green">/** Limitation de vitesse du joueur*/</font>
+              <font color="blue">int</font> freinJoueur;
+
+      <font color="blue">public</font> <font color="black">:</font>
+             <font color="green">/**
+             * Va permettre de creer le monde dans lequel l'utilisateur va être positionné.
+             * @param monde Fichier xml représentant le monde à afficher.
+             * @param _hauteurEcran définit la hauteur de l'écran en pixel.
+             * @param _largeurEcran définit la largeur de l'écran en pixel.
+             */</font>
+              Controleur<font color="black">(</font><font color="blue">char</font> <font color="black">*</font> monde,<font color="blue">int</font> _hauteurEcran,<font color="blue">int</font> _largeurEcran<font color="black">)</font>;
+              <font color="green">/**
+              * Destructeur de Controleur.
+              */</font>        
+              ~Controleur<font color="black">(</font><font color="black">)</font> <font color="black">{</font> <font color="blue">delete</font> laby ;<font color="black">}</font>
+              <font color="green">/**
+              * Appelée lorsqu'un redimensionnement de la fenêtre de jeu est effectué.
+              * Cela permettra de redimensionner la scene contenue dans la fenêtre.
+              * @param width nouvelle largeur de la fenêtre.
+              * @param height nouvelle hauteur de la fenêtre.
+              */</font> 
+              <font color="blue">void</font> resize<font color="black">(</font><font color="blue">int</font> width, <font color="blue">int</font> height<font color="black">)</font>;
+              <font color="green">/**
+              * Appelé lorsque la scene visible doit être redessinée.
+              */</font>
+              <font color="blue">void</font> display<font color="black">(</font><font color="blue">void</font><font color="black">)</font>;
+              <font color="green">/**
+              * Appelée lorsqu'une touche du clavier est relachée.
+              * @param key code Ascii de la touche qui est relachée.
+              * @param x position en x du curseur à l'écran.
+              * @param y position en y du curseur à l'écran.
+              */</font>
+              <font color="blue">void</font> keyboardUp<font color="black">(</font><font color="blue">unsigned</font> <font color="blue">char</font> key, <font color="blue">int</font> x, <font color="blue">int</font> y<font color="black">)</font>;
+              <font color="green">/**
+              * Appelée lorsqu'une touche du clavier est enfoncée.
+              * @param key code Ascii de la touche qui est enfoncée.
+              * @param x position en x du curseur à l'écran.
+              * @param y position en y du curseur à l'écran.
+              */</font>
+              <font color="blue">void</font> keyboard<font color="black">(</font><font color="blue">unsigned</font> <font color="blue">char</font> key, <font color="blue">int</font> x, <font color="blue">int</font> y<font color="black">)</font>;
+              <font color="green">/**
+              * Appelée lorsque le curseur de la souris change de position à l'écran.
+              * @param x nouvelle position en X du curseur de la souris.
+              * @param y nouvelle position en Y du curseur de la souris.
+              */</font>
+              <font color="blue">void</font> mouseMove<font color="black">(</font><font color="blue">int</font> x, <font color="blue">int</font> y<font color="black">)</font>;
+              <font color="green">/**
+              * Appelée lorsqu'il n'y a rien à faire.
+              * C'est ici que l'on va demander à redessiner la scène.
+              */</font>
+              <font color="blue">void</font> idle<font color="black">(</font><font color="blue">void</font><font color="black">)</font>;
+              <font color="green">/**
+              * Lorsque le temps passé en paramètre est passé, la methode est appelée.
+              * @param value temps en milliseconde.
+              */</font>
+              <font color="blue">void</font> timer<font color="black">(</font><font color="blue">int</font> value<font color="black">)</font>;
+      <font color="blue">private</font> <font color="black">:</font>
+              <font color="green">/** 
+              * Est appellée tout les x temps. Va modifier les parametres de vue et de position du joueur dans le monde
+              * en fonction des touches appuyées.
+              * @see calculerPosVue
+              */</font>
+              <font color="blue">void</font> postChange<font color="black">(</font><font color="black">)</font>;
+              <font color="green">/** Recalcule la position de la vue*/</font>
+              <font color="blue">void</font> calculerPosVue<font color="black">(</font><font color="black">)</font>; 
+              <font color="green">/**
+              * Permet de charger toutes les textures présente dans le dossier "Data/".
+              * Ces textures doivent être au format Bitmap 24bit et avoir comme extension ".bmp"
+              * La taille de ces images doit &#60;b&#62;IMPERATIVEMENT&#60;/b&#62; être une puissance de 2 (128*128, 256*256,...)
+              * @return une Map contenant toutes les textures qui ont été chargées.
+              */</font>
+              MapTex LoadGLTextures<font color="black">(</font><font color="black">)</font>;
+              <font color="green">/**
+              * Permet de charger tout les modeles contenu dans le dossier "Model/".
+              * Ces modèles doivent être au format md2 et avoir comme extension ".md2".
+              * @return une Map contenant tout les modeles qui ont été chargé.
+              */</font>
+              MapModele LoadGLModels<font color="black">(</font><font color="black">)</font>;
+              <font color="green">/**
+              * Permet de charger un fichier Bitmap 24bit.
+              * @return 1
+              */</font>
+              <font color="blue">int</font> ImageLoad<font color="black">(</font><font color="blue">char</font> <font color="black">*</font>filename, Image <font color="black">*</font>image<font color="black">)</font>;
+              <font color="green">/** Permet de recuperer et de se deplacer d'un short dans un fichier.*/</font>
+              <font color="blue">unsigned</font> <font color="blue">int</font> getshort<font color="black">(</font>FILE <font color="black">*</font>fp<font color="black">)</font>;
+              <font color="green">/** Permet de recuperer et de se deplacer d'un int dans un fichier.*/</font>
+              <font color="blue">unsigned</font> <font color="blue">int</font> getint<font color="black">(</font>FILE <font color="black">*</font>fp<font color="black">)</font>;
+<font color="black">}</font>;
+<font color="blue">#endif</font>
+
+</PRE>
+</BODY>
+</HTML>

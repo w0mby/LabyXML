@@ -1,0 +1,32 @@
+<HTML>
+<HEAD>
+<TITLE>
+BlocObj.h
+</TITLE>
+</HEAD>
+<BODY>
+<PRE>
+<font color="blue">#ifndef</font> __BLOCOBJ
+<font color="blue">#define</font> __BLOCOBJ
+
+<font color="blue">#include</font> <font color="maroon">"Surface.h"</font>
+<font color="blue">#include</font> <font color="maroon">"Md2Object.h"</font>
+
+<font color="blue">class</font> BlocObj <font color="black">{</font>
+      <font color="blue">private</font> <font color="black">:</font>
+              vector<font color="black">&#60;</font>Surface<font color="black">&#62;</font>  rectangles;
+              Vertex posElement;
+              Md2Object <font color="black">*</font> objetComplexe;
+              <font color="blue">float</font> scale;
+      <font color="blue">public</font> <font color="black">:</font>      
+              BlocObj<font color="black">(</font>TiXmlElement<font color="black">*</font> _elements,Vertex _posElement,MapTex textures<font color="black">)</font>;
+              ~BlocObj<font color="black">(</font><font color="black">)</font>;
+              <font color="blue">void</font> draw<font color="black">(</font><font color="black">)</font>; 
+              <font color="blue">bool</font> estIn<font color="black">(</font>Vertex posJoueur<font color="black">)</font><font color="black">{</font><font color="blue">return</font> <font color="blue">false</font>;<font color="black">}</font>;
+<font color="black">}</font>;
+
+<font color="blue">#endif</font>
+
+</PRE>
+</BODY>
+</HTML>

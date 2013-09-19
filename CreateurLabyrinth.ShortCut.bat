@@ -1,0 +1,2 @@
+cd CreateurLabyrinth
+call createurLabyrinth.jar

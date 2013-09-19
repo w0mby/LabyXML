@@ -1,0 +1,101 @@
+<HTML>
+<HEAD>
+<TITLE>
+Bloc.h
+</TITLE>
+</HEAD>
+<BODY>
+<PRE>
+<font color="blue">#ifndef</font> __BLOC
+<font color="blue">#define</font> __BLOC
+
+<font color="blue">#include</font> <font color="maroon">"Surface.h"</font>
+<font color="blue">#include</font> <font color="maroon">"Modele.h"</font>
+<font color="green">/**
+* Permet de représenter un bloc. Composé de rectangles.
+* Ce meme bloc peut contenir des modeles complexes. Il est situé dans l'espace par rapport a la position du Composant
+* auquel il appartient (position relative par rapport au composant).
+* @author Damien Dormal, Bavay Jonathan & Amine Rebbouh. 
+*/</font>
+<font color="blue">class</font> Bloc <font color="black">{</font>
+      <font color="blue">private</font> <font color="black">:</font>
+              <font color="green">/** Liste de toute les Surfaces composant le Bloc*/</font>
+              vector<font color="black">&#60;</font>Surface<font color="black">&#62;</font>  rectangles;
+              <font color="green">/** Liste de tout les Modeles contenus dans le Bloc*/</font>
+              vector<font color="black">&#60;</font>Modele<font color="black">&#62;</font>  modeles;
+              <font color="green">/** Position du Bloc relative a la position du Composant le contenant.*/</font>
+              Vertex posElement;
+              <font color="green">/** Point minimum en x du Bloc*/</font>
+              GLfloat minX;
+              <font color="green">/** Point maximum en x du Bloc*/</font>
+              GLfloat maxX;
+              <font color="green">/** Point minimum en z du Bloc*/</font>
+              GLfloat minZ;
+              <font color="green">/** Point maximum en z du Bloc*/</font>
+              GLfloat maxZ; 
+              <font color="green">/** Definit si le bloc est traversable ou non.*/</font>
+              <font color="blue">bool</font> traversable;
+      <font color="blue">public</font> <font color="black">:</font>      
+             <font color="green">/**
+             * Constructeur de Bloc il permet de construire un bloc grace a un element d'un arbre DOM.
+             * Il va aussi definir les points maximum et minimum du Bloc permettant la detection de bord.
+             * @param _elements Elements de l'arbre DOM représentant le Bloc.
+             * @param _posElement position relative du Bloc par rapport au Composant le contenant et cela dans un espace 3D.
+             * @param _modeles Map contenant tout les modeles disponibles pour la creation du Monde.
+             * @param textures Map contenant toutes les textures disponibles pour la creation du Monde.
+             * @see Composant
+             * @see &#60;a href="http://www.grinninglizard.com/tinyxmldocs/classTiXmlElement.html"&#62;TiXmlElement&#60;/a&#62;
+             */</font>
+              Bloc<font color="black">(</font>TiXmlElement<font color="black">*</font> _elements,Vertex _posElement, MapModele<font color="black">&</font> _modeles, MapTex<font color="black">&</font> textures<font color="black">)</font>;
+              <font color="green">/**
+              * Methode permettant de dessiner un bloc. Elle se borne à faire une translation jusqu'a la position relative du bloc
+              * et à appeler les methode de dessins des differentes Surfaces et Modeles composant le Bloc.
+              * @see Surface
+              * @see Modele
+              */</font>
+              <font color="blue">void</font> draw<font color="black">(</font><font color="black">)</font>; 
+              <font color="green">/**
+              * Permet de detecter si le joueur est actuellement positionné dans le Bloc ou non.
+              * @param posJoueur position actuelle du joueur qui sera comparée avec les minimum et maximum du Bloc.
+              * @return &#60;code&#62;true&#60;/code&#62; Si le joueur est position dans le Bloc. &#60;code&#62;false&#60;/code&#62; sinon.
+              */</font>
+              <font color="blue">bool</font> estIn<font color="black">(</font>Vertex posJoueur<font color="black">)</font>;
+              <font color="green">/**
+              * Permet de definir si le joueur entre en colision avec le bloc ou non.
+              * @deprecated Fusionnée avec la methode &#60;code&#62;estIn()&#60;/code&#62;
+              * @param posJoueur position actuelle du joueur qui sera comparée avec les minimum et maximum du Bloc.
+              * @return &#60;code&#62;true&#60;/code&#62; si le joueur rentre en colision avec le bloc. &#60;code&#62;false&#60;/code&#62; Sinon.
+              */</font>
+              <font color="blue">bool</font> estColision<font color="black">(</font>Vertex posJoueur<font color="black">)</font>;
+              <font color="green">/**
+              * Retourne la position de l'element. Cette position est relative à celle du Composant contenant le Bloc.
+              * @return la position de l'element relative au Composant le contenant.
+              */</font>
+              Vertex getPos<font color="black">(</font><font color="black">)</font><font color="black">{</font><font color="blue">return</font> posElement;<font color="black">}</font>
+              <font color="green">/**
+              * Retourne le point Minimum en X du Bloc.
+              * @return le point minimum en X du Bloc.
+              */</font>
+              GLfloat getMinX<font color="black">(</font><font color="black">)</font><font color="black">{</font><font color="blue">return</font> minX;<font color="black">}</font>
+              <font color="green">/**
+              * Retourne le point Maximum en X du Bloc.
+              * @return le point Maximum en X du Bloc.
+              */</font>
+              GLfloat getMaxX<font color="black">(</font><font color="black">)</font><font color="black">{</font><font color="blue">return</font> maxX;<font color="black">}</font>
+              <font color="green">/**
+              * Retourne le point Minimum en Z du Bloc.
+              * @return le point minimum en Z du Bloc.
+              */</font>
+              GLfloat getMinZ<font color="black">(</font><font color="black">)</font><font color="black">{</font><font color="blue">return</font> minZ;<font color="black">}</font>
+              <font color="green">/**
+              * Retourne le point Maximum en Z du Bloc.
+              * @return le point Maximum en Z du Bloc.
+              */</font>
+              GLfloat getMaxZ<font color="black">(</font><font color="black">)</font><font color="black">{</font><font color="blue">return</font> maxZ;<font color="black">}</font>
+<font color="black">}</font>;
+
+<font color="blue">#endif</font>
+
+</PRE>
+</BODY>
+</HTML>

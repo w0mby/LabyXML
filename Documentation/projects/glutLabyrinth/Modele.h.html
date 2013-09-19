@@ -1,0 +1,62 @@
+<HTML>
+<HEAD>
+<TITLE>
+Modele.h
+</TITLE>
+</HEAD>
+<BODY>
+<PRE>
+<font color="blue">#ifndef</font> __MODELE
+<font color="blue">#define</font> __MODELE
+
+<font color="blue">#include</font> <font color="maroon">&#60;map&#62;</font>
+<font color="blue">#include</font> <font color="maroon">&#60;string&#62;</font>
+<font color="blue">#include</font> <font color="maroon">"Md2Object.h"</font>
+<font color="blue">#include</font> <font color="maroon">"Vertex.h"</font>
+<font color="blue">#include</font> <font color="maroon">&#60;tinyxml.h&#62;</font>
+
+<font color="blue">using</font> <font color="blue">namespace</font> std;
+
+<font color="blue">typedef</font> map<font color="black">&#60;</font>string, GLuint , less<font color="black">&#60;</font>string<font color="black">&#62;</font> <font color="black">&#62;</font> MapTex;
+<font color="blue">typedef</font> MapTex<font color="black">:</font><font color="black">:</font>value_type PaireTex;
+<font color="blue">typedef</font> map<font color="black">&#60;</font>string, Md2Object<font color="black">*</font> , less<font color="black">&#60;</font>string<font color="black">&#62;</font> <font color="black">&#62;</font> MapModele;
+<font color="blue">typedef</font> MapModele<font color="black">:</font><font color="black">:</font>value_type PaireModel;
+
+<font color="green">/**
+* Représente un Modele complexe positionner dans le Bloc qui le contient et ayant une taille propre.
+* @author Damien Dormal, Bavay Jonathan & Amine Rebbouh
+* @see Bloc
+*/</font>
+<font color="blue">class</font> Modele <font color="black">{</font>
+      <font color="blue">private</font> <font color="black">:</font>
+              <font color="green">/** Position du Modele relative a la position du Bloc qui le contient.*/</font>
+              Vertex posModele;
+              <font color="green">/** Modele qui sera dessiné*/</font>
+              Md2Object<font color="black">*</font> md2Object;
+              <font color="green">/**texture associé au Modele*/</font>
+              GLuint texture;
+              <font color="green">/** Echelle du Modele*/</font>
+              <font color="blue">float</font> scale;
+              <font color="green">/** Rotation a faire effectué au Modele*/</font>
+              <font color="blue">float</font> rotation;
+              <font color="blue">bool</font> lumiere;
+      <font color="blue">public</font> <font color="black">:</font>
+             <font color="green">/**
+             * Construit un Modele a partir d'un element d'arbre DOM.
+             * @param _elements Représentation XML du Modele.
+             * @param _modeles Map contenant tout les modeles disponibles pour creer le labyrinthe.
+             * @param textures Map contenant toutes les textures disponibles pour creer le labyrinthe.
+             * @see &#60;a href="http://www.grinninglizard.com/tinyxmldocs/classTiXmlElement.html"&#62;TiXmlElement&#60;/a&#62;
+             */</font>
+              Modele<font color="black">(</font>TiXmlElement<font color="black">*</font> _elements, MapModele<font color="black">&</font> _modeles, MapTex<font color="black">&</font> _textures<font color="black">)</font>;
+              <font color="green">/**
+              * Dessine un Modele
+              */</font>
+              <font color="blue">void</font> draw<font color="black">(</font><font color="black">)</font>;
+<font color="black">}</font>;
+
+<font color="blue">#endif</font>
+
+</PRE>
+</BODY>
+</HTML>

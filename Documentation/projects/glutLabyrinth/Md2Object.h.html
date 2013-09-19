@@ -1,0 +1,107 @@
+<HTML>
+<HEAD>
+<TITLE>
+Md2Object.h
+</TITLE>
+</HEAD>
+<BODY>
+<PRE>
+<font color="blue">#ifndef</font> __MD2OBJECT
+<font color="blue">#define</font> __MD2OBJECT
+<font color="blue">#include</font> <font color="maroon">&#60;gl/glu.h&#62;</font>
+<font color="blue">#include</font> <font color="maroon">&#60;gl/gl.h&#62;</font>
+<font color="blue">#include</font> <font color="maroon">&#60;stdio.h&#62;</font>
+<font color="blue">#include</font> <font color="maroon">&#60;stdlib.h&#62;</font>
+<font color="blue">#include</font> <font color="maroon">&#60;string&#62;</font>
+<font color="blue">#include</font> <font color="maroon">"Vertex.h"</font>
+
+<font color="blue">typedef</font> <font color="blue">float</font> vec3_t<font color="black">[</font><font color="maroon">3</font><font color="black">]</font>;
+
+<font color="green">/* md2 header */</font>
+<font color="blue">typedef</font> <font color="blue">struct</font>
+<font color="black">{</font>
+  <font color="blue">int</font> <font color="blue">ident</font>;
+  <font color="blue">int</font> version;
+
+  <font color="blue">int</font> skinwidth;
+  <font color="blue">int</font> skinheight;
+
+  <font color="blue">int</font> framesize;
+
+  <font color="blue">int</font> num_skins;
+  <font color="blue">int</font> num_vertices;
+  <font color="blue">int</font> num_st;
+  <font color="blue">int</font> num_tris;
+  <font color="blue">int</font> num_glcmds;
+  <font color="blue">int</font> num_frames;
+
+  <font color="blue">int</font> offset_skins;
+  <font color="blue">int</font> offset_st;
+  <font color="blue">int</font> offset_tris;
+  <font color="blue">int</font> offset_frames;
+  <font color="blue">int</font> offset_glcmds;
+  <font color="blue">int</font> offset_end;
+<font color="black">}</font> md2_header_t;
+<font color="green">/* texture name */</font>
+<font color="blue">typedef</font> <font color="blue">struct</font> <font color="black">{</font> <font color="blue">char</font> <font color="blue">name</font><font color="black">[</font><font color="maroon">64</font><font color="black">]</font>; <font color="black">}</font> md2_skin_t;
+<font color="green">/* texture coords */</font>
+<font color="blue">typedef</font> <font color="blue">struct</font> <font color="black">{</font> <font color="blue">short</font> s; <font color="blue">short</font> t; <font color="black">}</font> md2_texCoord_t;
+<font color="green">/* triangle info */</font>
+<font color="blue">typedef</font> <font color="blue">struct</font> <font color="black">{</font> <font color="blue">unsigned</font> <font color="blue">short</font> vertex<font color="black">[</font><font color="maroon">3</font><font color="black">]</font>; <font color="blue">unsigned</font> <font color="blue">short</font> st<font color="black">[</font><font color="maroon">3</font><font color="black">]</font>; <font color="black">}</font> md2_triangle_t;
+<font color="green">/* compressed vertex */</font>
+<font color="blue">typedef</font> <font color="blue">struct</font> <font color="black">{</font><font color="blue">unsigned</font> <font color="blue">char</font> v<font color="black">[</font><font color="maroon">3</font><font color="black">]</font>; <font color="blue">unsigned</font> <font color="blue">char</font> normalIndex; <font color="black">}</font> md2_vertex_t;
+<font color="green">/* model frame */</font>
+<font color="blue">typedef</font> <font color="blue">struct</font><font color="black">{</font> vec3_t scale; vec3_t translate; <font color="blue">char</font> <font color="blue">name</font><font color="black">[</font><font color="maroon">16</font><font color="black">]</font>; md2_vertex_t <font color="black">*</font>verts; <font color="black">}</font> md2_frame_t;
+<font color="green">/* gl command packet */</font>
+<font color="blue">typedef</font> <font color="blue">struct</font><font color="black">{</font> <font color="blue">float</font> s; <font color="blue">float</font> t; <font color="blue">int</font> index; <font color="black">}</font> md2_glcmd_t;
+<font color="green">/* md2 model structure */</font>
+<font color="blue">typedef</font> <font color="blue">struct</font><font color="black">{</font>
+  md2_header_t header;
+  md2_skin_t <font color="black">*</font>skins;
+  md2_texCoord_t <font color="black">*</font>texcoords;
+  md2_triangle_t <font color="black">*</font>triangles;
+  md2_frame_t <font color="black">*</font>frames;
+  <font color="blue">int</font> <font color="black">*</font>glcmds;
+  GLuint tex_id;
+<font color="black">}</font> md2_model_t;
+
+<font color="green">/** 
+* Classe permettant de charger et de représenter un Modele de type Md2.
+* @author Damien Dormal, Bavay Jonathan & Amine Rebbouh
+*/</font>
+<font color="blue">class</font> Md2Object <font color="black">{</font>
+      <font color="blue">private</font> <font color="black">:</font>
+              <font color="green">/**Structure contenant toutes les informations sur le modele.*/</font>
+              md2_model_t<font color="black">*</font> mdl;
+              <font color="green">/**Texture associée au modele*/</font>
+              GLuint texture;
+      <font color="blue">public</font> <font color="black">:</font>      
+             <font color="green">/**
+             * Construit un modele complexe a partir d'un fichier Md2
+             * @param fichier fichier .md2 contenant le modele à représenter.
+             */</font>
+             Md2Object<font color="black">(</font><font color="blue">char</font> <font color="black">*</font> fichier<font color="black">)</font>;
+             <font color="green">/* Permet de dessiner un modele.
+             * Il est possible de dessiner un meme modele avec une taille differente ou un emplacement different
+             * @param scale echelle a laquelle sera dessiner le modele.
+             * @param rotation rotation a faire effectué au modele.
+             * @param posObjet Position de l'objet.
+             */</font>
+             <font color="blue">void</font> draw<font color="black">(</font><font color="blue">float</font> scale,<font color="blue">float</font> rotation, Vertex posObjet<font color="black">)</font>;
+             <font color="green">/**
+             * Assigne une texture au modele.
+             * @param texture entier représentant la texture en mémoire.
+             */</font>
+             <font color="blue">void</font> setTexture<font color="black">(</font>GLuint _texture<font color="black">)</font><font color="black">{</font>texture <font color="black">=</font> _texture;<font color="black">}</font>;
+             <font color="green">/**
+             * Destructeur de md2Object
+             */</font>
+             ~Md2Object<font color="black">(</font><font color="black">)</font>;
+             <font color="green">//Md2Object(const Md2Object& md2object);</font>
+<font color="black">}</font>;
+
+<font color="blue">#endif</font>
+
+</PRE>
+</BODY>
+</HTML>

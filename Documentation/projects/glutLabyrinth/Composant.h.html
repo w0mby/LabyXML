@@ -1,0 +1,54 @@
+<HTML>
+<HEAD>
+<TITLE>
+Composant.h
+</TITLE>
+</HEAD>
+<BODY>
+<PRE>
+<font color="blue">#ifndef</font> __COMPOSANT
+<font color="blue">#define</font> __COMPOSANT
+
+<font color="blue">#include</font> <font color="maroon">"Bloc.h"</font>
+
+<font color="green">/**
+* Permet de représenter un composant. Un composant est un ensemble de Bloc.
+* Le Composant est positionné dans l'espace 3D de manière absolue.
+* @author Damien Dormal, Bavay Jonathan & Amine Rebbouh. 
+*/</font>
+<font color="blue">class</font> Composant <font color="black">{</font>
+      <font color="blue">private</font><font color="black">:</font>
+             <font color="green">/** Liste de tout les Blocs constituant le Composant.*/</font>
+             vector<font color="black">&#60;</font>Bloc<font color="black">&#62;</font> elements;
+             <font color="green">/** Position absolue du Composant dans l'espace 3D.*/</font>
+             Vertex posElement;
+      <font color="blue">public</font> <font color="black">:</font>
+             <font color="green">/**
+             * Constructeur créant un Composant a partir d'un Element d'arbre DOM.
+             * @param _elements Element de l'arbre DOM représentant le composant qui sera construit.
+             * @param _posElement Position absolue du Composant dans l'espace 3D.
+             * @param _modeles Liste de tout les modeles disponible pour creer le Labyrinthe.
+             * @param textures Liste de toutes les textures disponible pour creer le Labyrinthe.
+             * @see &#60;a href="http://www.grinninglizard.com/tinyxmldocs/classTiXmlElement.html"&#62;TiXmlElement&#60;/a&#62;
+             */</font>
+             Composant<font color="black">(</font>TiXmlElement<font color="black">*</font> _elements,Vertex _posElement,MapModele<font color="black">&</font> _modeles,MapTex<font color="black">&</font> textures<font color="black">)</font>;
+             <font color="green">/**
+             * Permet de dessiner en 3D un composant à l'ecran. 
+             * On positionne la position de dessin à la position du Composant.
+             * On appel la methode de dessin de chaque Bloc contenu dans le Composant.
+             * Si la position du bloc à dessiner est trop loin de la position du joueur, sa methode de dessin n'est pas appelée.
+             * @see Bloc
+             */</font>
+             <font color="blue">void</font> draw<font color="black">(</font>Vertex posPerso,Vertex posVue<font color="black">)</font>;
+             <font color="green">/**
+             * Permet de savoir si le joueur est positionné dans le Composant ou non.
+             * @return &#60;code&#62;true&#60;/code&#62; Si le joueur est positionné dans le composant. &#60;code&#62;false&#60;/code&#62; sinon.
+             */</font>
+             <font color="blue">bool</font> estIn<font color="black">(</font>Vertex posJoueur<font color="black">)</font>;
+<font color="black">}</font>;
+
+<font color="blue">#endif</font>
+
+</PRE>
+</BODY>
+</HTML>

@@ -1,0 +1,56 @@
+<HTML>
+<HEAD>
+<TITLE>
+Modele.cpp
+</TITLE>
+</HEAD>
+<BODY>
+<PRE>
+<font color="blue">#include</font> <font color="maroon">"Modele.h"</font>
+<font color="blue">#include</font> <font color="maroon">&#60;gl\glut.h&#62;</font>    
+
+Modele<font color="black">:</font><font color="black">:</font>Modele<font color="black">(</font>TiXmlElement<font color="black">*</font> _elements, MapModele<font color="black">&</font> _modeles, MapTex<font color="black">&</font> _textures<font color="black">)</font><font color="black">{</font>
+   lumiere <font color="black">=</font> <font color="blue">false</font>;
+   string nom <font color="black">=</font>  _elements<font color="black">-</font><font color="black">&#62;</font>Attribute<font color="black">(</font><font color="maroon">"nom"</font><font color="black">)</font>;
+   MapModele<font color="black">:</font><font color="black">:</font>iterator p <font color="black">=</font> _modeles.find<font color="black">(</font>nom<font color="black">)</font>;
+   <font color="blue">if</font> <font color="black">(</font>p <font color="black">!</font><font color="black">=</font> _modeles.end<font color="black">(</font><font color="black">)</font><font color="black">)</font> <font color="black">{</font>
+      md2Object <font color="black">=</font> p<font color="black">-</font><font color="black">&#62;</font>second;
+   <font color="black">}</font>
+   string nomTex <font color="black">=</font>_elements<font color="black">-</font><font color="black">&#62;</font>Attribute<font color="black">(</font><font color="maroon">"textModele"</font><font color="black">)</font>;
+   MapTex<font color="black">:</font><font color="black">:</font>iterator iter <font color="black">=</font> _textures.find<font color="black">(</font>nomTex<font color="black">)</font>;
+   <font color="blue">if</font> <font color="black">(</font>iter <font color="black">!</font><font color="black">=</font> _textures.end<font color="black">(</font><font color="black">)</font><font color="black">)</font> <font color="black">{</font>
+      md2Object<font color="black">-</font><font color="black">&#62;</font>setTexture<font color="black">(</font>iter<font color="black">-</font><font color="black">&#62;</font>second<font color="black">)</font>;
+      texture <font color="black">=</font> iter<font color="black">-</font><font color="black">&#62;</font>second;
+   <font color="black">}</font>   
+       <font color="blue">int</font> travers; _elements<font color="black">-</font><font color="black">&#62;</font>QueryIntAttribute<font color="black">(</font><font color="maroon">"lampe"</font>,<font color="black">&</font>travers<font color="black">)</font>;
+
+       <font color="blue">if</font><font color="black">(</font>travers <font color="black">=</font><font color="black">=</font> <font color="maroon">1</font><font color="black">)</font><font color="black">{</font>
+          lumiere <font color="black">=</font> <font color="blue">true</font>;
+       <font color="black">}</font>
+   _elements<font color="black">-</font><font color="black">&#62;</font>QueryFloatAttribute<font color="black">(</font><font color="maroon">"rotation"</font>,<font color="black">&</font>rotation<font color="black">)</font>;
+   _elements<font color="black">-</font><font color="black">&#62;</font>QueryFloatAttribute<font color="black">(</font><font color="maroon">"scale"</font>,<font color="black">&</font>scale<font color="black">)</font>;
+   _elements<font color="black">-</font><font color="black">&#62;</font>QueryFloatAttribute<font color="black">(</font><font color="maroon">"x"</font>,<font color="black">&</font>posModele.x<font color="black">)</font>;
+   _elements<font color="black">-</font><font color="black">&#62;</font>QueryFloatAttribute<font color="black">(</font><font color="maroon">"y"</font>,<font color="black">&</font>posModele.y<font color="black">)</font>;
+   _elements<font color="black">-</font><font color="black">&#62;</font>QueryFloatAttribute<font color="black">(</font><font color="maroon">"z"</font>,<font color="black">&</font>posModele.z<font color="black">)</font>;
+<font color="black">}</font>
+<font color="blue">void</font> Modele<font color="black">:</font><font color="black">:</font>draw<font color="black">(</font><font color="black">)</font><font color="black">{</font>
+<font color="blue">float</font> MatSpec<font color="black">[</font><font color="maroon">4</font><font color="black">]</font> <font color="black">=</font> <font color="black">{</font><font color="maroon">1</font>.f,<font color="maroon">1</font>.f,<font color="maroon">1</font>.f,<font color="maroon">1</font>.f<font color="black">}</font>;
+<font color="blue">float</font> MatDif<font color="black">[</font><font color="maroon">4</font><font color="black">]</font> <font color="black">=</font> <font color="black">{</font>.8f,.8f,.5f,<font color="maroon">1</font>.f<font color="black">}</font>;
+<font color="blue">float</font> MatAmb<font color="black">[</font><font color="maroon">4</font><font color="black">]</font> <font color="black">=</font> <font color="black">{</font>.8f,.8f,.5f,<font color="maroon">1</font>.f<font color="black">}</font>;
+<font color="blue">int</font>   LightPos<font color="black">[</font><font color="maroon">4</font><font color="black">]</font> <font color="black">=</font> <font color="black">{</font><font color="maroon">0</font>,<font color="maroon">0</font>,<font color="maroon">0</font>,<font color="maroon">0</font><font color="black">}</font>;
+<font color="blue">float</font> LightDif<font color="black">[</font><font color="maroon">4</font><font color="black">]</font> <font color="black">=</font> <font color="black">{</font>.6f,<font color="maroon">1</font>.f,<font color="maroon">1</font>.f,<font color="maroon">1</font>.f<font color="black">}</font>;
+<font color="blue">float</font> LightSpec<font color="black">[</font><font color="maroon">4</font><font color="black">]</font> <font color="black">=</font> <font color="black">{</font>.6f,<font color="maroon">1</font>.f,<font color="maroon">1</font>.f,<font color="maroon">1</font>.f<font color="black">}</font>;
+<font color="blue">float</font> LightAmb<font color="black">[</font><font color="maroon">4</font><font color="black">]</font> <font color="black">=</font> <font color="black">{</font>.0f,.0f,<font color="maroon">1</font>.1f,<font color="maroon">1</font>.f<font color="black">}</font>;
+     md2Object<font color="black">-</font><font color="black">&#62;</font>setTexture<font color="black">(</font>texture<font color="black">)</font>;
+     md2Object<font color="black">-</font><font color="black">&#62;</font>draw<font color="black">(</font>scale,rotation,posModele<font color="black">)</font>;
+     <font color="blue">if</font><font color="black">(</font>lumiere<font color="black">)</font><font color="black">{</font>
+     <font color="black">}</font>
+     <font color="blue">else</font>
+               glDisable<font color="black">(</font>GL_LIGHT0<font color="black">)</font>;
+<font color="black">}</font>
+
+
+
+</PRE>
+</BODY>
+</HTML>

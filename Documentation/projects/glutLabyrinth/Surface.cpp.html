@@ -1,0 +1,79 @@
+<HTML>
+<HEAD>
+<TITLE>
+Surface.cpp
+</TITLE>
+</HEAD>
+<BODY>
+<PRE>
+<font color="blue">#include</font> <font color="maroon">"Surface.h"</font>
+
+Surface<font color="black">:</font><font color="black">:</font>Surface<font color="black">(</font>TiXmlElement<font color="black">*</font> _surface,MapTex<font color="black">&</font> textures<font color="black">)</font><font color="black">{</font>
+     TiXmlElement<font color="black">*</font> elem;
+     string textureName <font color="black">=</font> _surface<font color="black">-</font><font color="black">&#62;</font>Attribute<font color="black">(</font><font color="maroon">"tex"</font><font color="black">)</font>;   
+     MapTex<font color="black">:</font><font color="black">:</font>iterator p <font color="black">=</font> textures.find<font color="black">(</font>textureName<font color="black">)</font>;
+     <font color="blue">if</font> <font color="black">(</font>p <font color="black">!</font><font color="black">=</font> textures.end<font color="black">(</font><font color="black">)</font><font color="black">)</font> <font color="black">{</font>
+        texture <font color="black">=</font> p<font color="black">-</font><font color="black">&#62;</font>second;
+     <font color="black">}</font>    
+     elem <font color="black">=</font> _surface<font color="black">-</font><font color="black">&#62;</font>FirstChildElement<font color="black">(</font><font color="maroon">"vertex"</font><font color="black">)</font>;
+     Vertex vertex;
+      <font color="blue">while</font> <font color="black">(</font>elem<font color="black">)</font><font color="black">{</font>
+           elem<font color="black">-</font><font color="black">&#62;</font>QueryFloatAttribute<font color="black">(</font><font color="maroon">"x"</font>,<font color="black">&</font>vertex.x<font color="black">)</font>;   
+           elem<font color="black">-</font><font color="black">&#62;</font>QueryFloatAttribute<font color="black">(</font><font color="maroon">"y"</font>,<font color="black">&</font>vertex.y<font color="black">)</font>;  
+           elem<font color="black">-</font><font color="black">&#62;</font>QueryFloatAttribute<font color="black">(</font><font color="maroon">"z"</font>,<font color="black">&</font>vertex.z<font color="black">)</font>;   
+           vertexs.push_back<font color="black">(</font>vertex<font color="black">)</font>;
+           elem <font color="black">=</font> elem<font color="black">-</font><font color="black">&#62;</font>NextSiblingElement<font color="black">(</font><font color="maroon">"vertex"</font><font color="black">)</font>;
+       <font color="black">}</font>
+     elem <font color="black">=</font> _surface<font color="black">-</font><font color="black">&#62;</font>FirstChildElement<font color="black">(</font><font color="maroon">"coordTex"</font><font color="black">)</font>;
+     CoordTex coordtex;
+      <font color="blue">while</font> <font color="black">(</font>elem<font color="black">)</font><font color="black">{</font>
+           elem<font color="black">-</font><font color="black">&#62;</font>QueryFloatAttribute<font color="black">(</font><font color="maroon">"x"</font>,<font color="black">&</font>coordtex.x<font color="black">)</font>;   
+           elem<font color="black">-</font><font color="black">&#62;</font>QueryFloatAttribute<font color="black">(</font><font color="maroon">"y"</font>,<font color="black">&</font>coordtex.y<font color="black">)</font>;  
+           coordTexs.push_back<font color="black">(</font>coordtex<font color="black">)</font>;
+           elem <font color="black">=</font> elem<font color="black">-</font><font color="black">&#62;</font>NextSiblingElement<font color="black">(</font><font color="maroon">"coordTex"</font><font color="black">)</font>;
+       <font color="black">}</font>
+<font color="black">}</font>
+
+<font color="blue">void</font> Surface<font color="black">:</font><font color="black">:</font>draw<font color="black">(</font><font color="black">)</font><font color="black">{</font>
+     glBindTexture<font color="black">(</font>GL_TEXTURE_2D, texture<font color="black">)</font>;
+     glBegin<font color="black">(</font>GL_QUADS<font color="black">)</font>;
+     <font color="blue">for</font> <font color="black">(</font><font color="blue">int</font> i<font color="black">=</font><font color="maroon">0</font>;i<font color="black">&#60;</font>vertexs.size<font color="black">(</font><font color="black">)</font>;i<font color="black">+</font><font color="black">+</font><font color="black">)</font><font color="black">{</font>
+         glTexCoord2f<font color="black">(</font>coordTexs<font color="black">[</font>i<font color="black">]</font>.x,coordTexs<font color="black">[</font>i<font color="black">]</font>.y<font color="black">)</font>;
+         glVertex3f<font color="black">(</font>vertexs<font color="black">[</font>i<font color="black">]</font>.x,vertexs<font color="black">[</font>i<font color="black">]</font>.y, vertexs<font color="black">[</font>i<font color="black">]</font>.z<font color="black">)</font>;   
+             
+     <font color="black">}</font>
+     glEnd<font color="black">(</font><font color="black">)</font>;    
+<font color="black">}</font>
+
+GLfloat Surface<font color="black">:</font><font color="black">:</font>getMinX<font color="black">(</font><font color="black">)</font> <font color="black">{</font>
+        GLfloat min <font color="black">=</font> vertexs<font color="black">[</font><font color="maroon">0</font><font color="black">]</font>.x;
+        <font color="blue">for</font> <font color="black">(</font><font color="blue">int</font> i<font color="black">=</font><font color="maroon">1</font>;i<font color="black">&#60;</font>vertexs.size<font color="black">(</font><font color="black">)</font>;i<font color="black">+</font><font color="black">+</font><font color="black">)</font><font color="black">{</font>
+            <font color="blue">if</font> <font color="black">(</font> vertexs<font color="black">[</font>i<font color="black">]</font>.x <font color="black">&#60;</font> min <font color="black">)</font> min <font color="black">=</font> vertexs<font color="black">[</font>i<font color="black">]</font>.x ;
+        <font color="black">}</font>
+        <font color="blue">return</font> min;
+<font color="black">}</font>
+GLfloat Surface<font color="black">:</font><font color="black">:</font>getMaxX<font color="black">(</font><font color="black">)</font> <font color="black">{</font>
+        GLfloat max <font color="black">=</font> vertexs<font color="black">[</font><font color="maroon">0</font><font color="black">]</font>.x;
+        <font color="blue">for</font> <font color="black">(</font><font color="blue">int</font> i<font color="black">=</font><font color="maroon">1</font>;i<font color="black">&#60;</font>vertexs.size<font color="black">(</font><font color="black">)</font>;i<font color="black">+</font><font color="black">+</font><font color="black">)</font><font color="black">{</font>
+            <font color="blue">if</font> <font color="black">(</font> vertexs<font color="black">[</font>i<font color="black">]</font>.x <font color="black">&#62;</font> max <font color="black">)</font> max <font color="black">=</font> vertexs<font color="black">[</font>i<font color="black">]</font>.x ;
+        <font color="black">}</font>
+        <font color="blue">return</font> max;        
+<font color="black">}</font>
+GLfloat Surface<font color="black">:</font><font color="black">:</font>getMinZ<font color="black">(</font><font color="black">)</font> <font color="black">{</font>
+        GLfloat min <font color="black">=</font> vertexs<font color="black">[</font><font color="maroon">0</font><font color="black">]</font>.z;
+        <font color="blue">for</font> <font color="black">(</font><font color="blue">int</font> i<font color="black">=</font><font color="maroon">1</font>;i<font color="black">&#60;</font>vertexs.size<font color="black">(</font><font color="black">)</font>;i<font color="black">+</font><font color="black">+</font><font color="black">)</font><font color="black">{</font>
+            <font color="blue">if</font> <font color="black">(</font> vertexs<font color="black">[</font>i<font color="black">]</font>.z <font color="black">&#60;</font> min <font color="black">)</font> min <font color="black">=</font> vertexs<font color="black">[</font>i<font color="black">]</font>.z ;
+        <font color="black">}</font>
+        <font color="blue">return</font> min;        
+<font color="black">}</font>
+GLfloat Surface<font color="black">:</font><font color="black">:</font>getMaxZ<font color="black">(</font><font color="black">)</font> <font color="black">{</font>
+        GLfloat max <font color="black">=</font> vertexs<font color="black">[</font><font color="maroon">0</font><font color="black">]</font>.z;
+        <font color="blue">for</font> <font color="black">(</font><font color="blue">int</font> i<font color="black">=</font><font color="maroon">1</font>;i<font color="black">&#60;</font>vertexs.size<font color="black">(</font><font color="black">)</font>;i<font color="black">+</font><font color="black">+</font><font color="black">)</font><font color="black">{</font>
+            <font color="blue">if</font> <font color="black">(</font> vertexs<font color="black">[</font>i<font color="black">]</font>.z <font color="black">&#62;</font> max <font color="black">)</font> max <font color="black">=</font> vertexs<font color="black">[</font>i<font color="black">]</font>.z ;
+        <font color="black">}</font>
+        <font color="blue">return</font> max;        
+<font color="black">}</font>
+
+</PRE>
+</BODY>
+</HTML>

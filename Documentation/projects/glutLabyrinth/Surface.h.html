@@ -1,0 +1,79 @@
+<HTML>
+<HEAD>
+<TITLE>
+Surface.h
+</TITLE>
+</HEAD>
+<BODY>
+<PRE>
+<font color="blue">#ifndef</font> __RECTANGLE
+<font color="blue">#define</font> __RECTANGLE
+
+<font color="blue">#include</font> <font color="maroon">&#60;stdlib.h&#62;</font>
+<font color="blue">#include</font> <font color="maroon">&#60;gl\gl.h&#62;</font>          <font color="green">// Header File For The OpenGL32 Library</font>
+<font color="blue">#include</font> <font color="maroon">&#60;gl\glu.h&#62;</font>         <font color="green">// Header File For The GLu32 Library</font>
+<font color="blue">#include</font> <font color="maroon">&#60;tinyxml.h&#62;</font>
+<font color="blue">#include</font> <font color="maroon">"Vertex.h"</font>
+<font color="blue">#include</font> <font color="maroon">"CoordTex.h"</font>
+
+<font color="blue">#include</font> <font color="maroon">&#60;vector&#62;</font>
+<font color="blue">#include</font> <font color="maroon">&#60;map&#62;</font>
+<font color="blue">#include</font> <font color="maroon">&#60;string&#62;</font>
+
+<font color="blue">using</font> <font color="blue">namespace</font> std;
+
+<font color="blue">typedef</font> map<font color="black">&#60;</font>string, GLuint , less<font color="black">&#60;</font>string<font color="black">&#62;</font> <font color="black">&#62;</font> MapTex ;
+<font color="blue">typedef</font> MapTex<font color="black">:</font><font color="black">:</font>value_type PaireTex;
+
+<font color="green">/**
+* Permet de stocker un rectangle avec une texture attaché, et cela dans un espace à 3 dimensions.
+* permet aussi de le dessiner a l'ecran.
+* @author Damien Dormal, Bavay Jonathan & Amine Rebbouh.
+*/</font>
+<font color="blue">class</font> Surface <font color="black">{</font>
+      <font color="blue">private</font><font color="black">:</font>
+              <font color="green">/** Liste de tout les vertexs constituant la Surface.*/</font>
+              vector<font color="black">&#60;</font>Vertex<font color="black">&#62;</font> vertexs;
+              <font color="green">/** Liste de toutes les coordonnées permettant d'appliquer la texture à la Surface.*/</font>
+              vector<font color="black">&#60;</font>CoordTex<font color="black">&#62;</font> coordTexs;
+              <font color="green">/** Texture à appliqué à la Surface.*/</font>
+              GLuint texture;
+      <font color="blue">public</font> <font color="black">:</font>
+             <font color="green">/**
+             * Constructeur de Surface il permet de construire une surface grace a un element d'un arbre DOM.
+             * @param _surface Elements de l'arbre DOM représentant la surface.
+             * @param textures Map contenant toutes les textures disponibles pour la creation du Monde.
+             * @see &#60;a href="http://www.grinninglizard.com/tinyxmldocs/classTiXmlElement.html"&#62;TiXmlElement&#60;/a&#62;
+             */</font>            
+             Surface<font color="black">(</font>TiXmlElement<font color="black">*</font> _surface, MapTex<font color="black">&</font> textures<font color="black">)</font>;
+             <font color="green">/**
+             * Permet de dessiner une surface dans un espace 3D.
+             */</font>
+             <font color="blue">void</font> draw<font color="black">(</font><font color="black">)</font>;
+             <font color="green">/**
+             * Detecte le point minimum en X de la surface.
+             * @return le point minimum en X de la surface.
+             */</font>
+             GLfloat getMinX<font color="black">(</font><font color="black">)</font>;
+             <font color="green">/**
+             * Detecte le point maximum en X de la surface.
+             * @return le point maximum en X de la surface.
+             */</font>
+             GLfloat getMaxX<font color="black">(</font><font color="black">)</font>;
+             <font color="green">/**
+             * Detecte le point minimum en Z de la surface.
+             * @return le point minimum en Z de la surface.
+             */</font>
+             GLfloat getMinZ<font color="black">(</font><font color="black">)</font>;
+             <font color="green">/**
+             * Detecte le point maximum en Z de la surface.
+             * @return le point maximum en Z de la surface.
+             */</font>
+             GLfloat getMaxZ<font color="black">(</font><font color="black">)</font>;
+<font color="black">}</font>;
+
+<font color="blue">#endif</font>
+
+</PRE>
+</BODY>
+</HTML>

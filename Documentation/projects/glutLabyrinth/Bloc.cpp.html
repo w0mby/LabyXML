@@ -1,0 +1,73 @@
+<HTML>
+<HEAD>
+<TITLE>
+Bloc.cpp
+</TITLE>
+</HEAD>
+<BODY>
+<PRE>
+<font color="blue">#include</font> <font color="maroon">"Bloc.h"</font>
+
+Bloc<font color="black">:</font><font color="black">:</font>Bloc<font color="black">(</font>TiXmlElement<font color="black">*</font> _elements, Vertex _posElement, MapModele<font color="black">&</font> _modeles, MapTex<font color="black">&</font> textures<font color="black">)</font> <font color="black">{</font>
+       posElement <font color="black">=</font> _posElement; 
+       traversable <font color="black">=</font> <font color="blue">true</font>;
+       Vertex posComposant;
+       TiXmlElement<font color="black">*</font> elem;
+       <font color="blue">int</font> travers; _elements<font color="black">-</font><font color="black">&#62;</font>QueryIntAttribute<font color="black">(</font><font color="maroon">"traverse"</font>,<font color="black">&</font>travers<font color="black">)</font>;
+       <font color="blue">if</font><font color="black">(</font><font color="black">!</font>travers<font color="black">)</font>
+          traversable <font color="black">=</font> <font color="blue">false</font>;
+       elem <font color="black">=</font> _elements<font color="black">-</font><font color="black">&#62;</font>FirstChildElement<font color="black">(</font><font color="maroon">"rectangle"</font><font color="black">)</font>;
+       <font color="blue">while</font> <font color="black">(</font>elem<font color="black">)</font>
+       <font color="black">{</font>
+           rectangles.push_back<font color="black">(</font>Surface<font color="black">(</font>elem,textures<font color="black">)</font><font color="black">)</font>;
+           elem <font color="black">=</font> elem<font color="black">-</font><font color="black">&#62;</font>NextSiblingElement<font color="black">(</font><font color="maroon">"rectangle"</font><font color="black">)</font>; <font color="green">// iteration</font>
+       <font color="black">}</font>
+       elem <font color="black">=</font> _elements<font color="black">-</font><font color="black">&#62;</font>FirstChildElement<font color="black">(</font><font color="maroon">"modele"</font><font color="black">)</font>;
+       <font color="blue">while</font> <font color="black">(</font>elem<font color="black">)</font>
+       <font color="black">{</font>
+           modeles.push_back<font color="black">(</font>Modele<font color="black">(</font>elem,_modeles, textures<font color="black">)</font><font color="black">)</font>;
+           elem <font color="black">=</font> elem<font color="black">-</font><font color="black">&#62;</font>NextSiblingElement<font color="black">(</font><font color="maroon">"modele"</font><font color="black">)</font>; <font color="green">// iteration</font>
+       <font color="black">}</font>
+       minX <font color="black">=</font> rectangles<font color="black">[</font><font color="maroon">0</font><font color="black">]</font>.getMinX<font color="black">(</font><font color="black">)</font>;
+       <font color="blue">for</font> <font color="black">(</font><font color="blue">int</font> i<font color="black">=</font><font color="maroon">1</font>;i<font color="black">&#60;</font>rectangles.size<font color="black">(</font><font color="black">)</font>;i<font color="black">+</font><font color="black">+</font><font color="black">)</font> <font color="black">{</font>
+           <font color="blue">if</font> <font color="black">(</font> rectangles<font color="black">[</font>i<font color="black">]</font>.getMinX<font color="black">(</font><font color="black">)</font> <font color="black">&#60;</font> minX <font color="black">)</font> minX <font color="black">=</font> rectangles<font color="black">[</font>i<font color="black">]</font>.getMinX<font color="black">(</font><font color="black">)</font>;     
+       <font color="black">}</font>
+       minX <font color="black">+</font><font color="black">=</font> posElement.x;
+       maxX <font color="black">=</font> rectangles<font color="black">[</font><font color="maroon">0</font><font color="black">]</font>.getMaxX<font color="black">(</font><font color="black">)</font>;
+       <font color="blue">for</font> <font color="black">(</font><font color="blue">int</font> i<font color="black">=</font><font color="maroon">1</font>;i<font color="black">&#60;</font>rectangles.size<font color="black">(</font><font color="black">)</font>;i<font color="black">+</font><font color="black">+</font><font color="black">)</font> <font color="black">{</font>
+           <font color="blue">if</font> <font color="black">(</font> rectangles<font color="black">[</font>i<font color="black">]</font>.getMaxX<font color="black">(</font><font color="black">)</font> <font color="black">&#62;</font> maxX <font color="black">)</font> maxX <font color="black">=</font> rectangles<font color="black">[</font>i<font color="black">]</font>.getMaxX<font color="black">(</font><font color="black">)</font>;     
+       <font color="black">}</font>
+       maxX <font color="black">+</font><font color="black">=</font> posElement.x;
+       minZ <font color="black">=</font> rectangles<font color="black">[</font><font color="maroon">0</font><font color="black">]</font>.getMinZ<font color="black">(</font><font color="black">)</font>;
+       <font color="blue">for</font> <font color="black">(</font><font color="blue">int</font> i<font color="black">=</font><font color="maroon">1</font>;i<font color="black">&#60;</font>rectangles.size<font color="black">(</font><font color="black">)</font>;i<font color="black">+</font><font color="black">+</font><font color="black">)</font> <font color="black">{</font>
+           <font color="blue">if</font> <font color="black">(</font> rectangles<font color="black">[</font>i<font color="black">]</font>.getMinZ<font color="black">(</font><font color="black">)</font> <font color="black">&#60;</font> minZ <font color="black">)</font> minZ <font color="black">=</font> rectangles<font color="black">[</font>i<font color="black">]</font>.getMinZ<font color="black">(</font><font color="black">)</font>;     
+       <font color="black">}</font>
+       minZ <font color="black">+</font><font color="black">=</font> posElement.z;
+       maxZ <font color="black">=</font> rectangles<font color="black">[</font><font color="maroon">0</font><font color="black">]</font>.getMaxZ<font color="black">(</font><font color="black">)</font>;
+       <font color="blue">for</font> <font color="black">(</font><font color="blue">int</font> i<font color="black">=</font><font color="maroon">1</font>;i<font color="black">&#60;</font>rectangles.size<font color="black">(</font><font color="black">)</font>;i<font color="black">+</font><font color="black">+</font><font color="black">)</font> <font color="black">{</font>
+           <font color="blue">if</font> <font color="black">(</font> rectangles<font color="black">[</font>i<font color="black">]</font>.getMaxZ<font color="black">(</font><font color="black">)</font> <font color="black">&#62;</font> maxZ <font color="black">)</font> maxZ <font color="black">=</font> rectangles<font color="black">[</font>i<font color="black">]</font>.getMaxZ<font color="black">(</font><font color="black">)</font>;     
+       <font color="black">}</font>
+       maxZ <font color="black">+</font><font color="black">=</font> posElement.z;
+<font color="black">}</font>
+
+
+<font color="blue">void</font> Bloc<font color="black">:</font><font color="black">:</font>draw<font color="black">(</font><font color="black">)</font> <font color="black">{</font>
+     glTranslatef<font color="black">(</font>posElement.x,posElement.y,posElement.z<font color="black">)</font>;
+     <font color="blue">for</font> <font color="black">(</font><font color="blue">int</font> i<font color="black">=</font><font color="maroon">0</font>;i<font color="black">&#60;</font>rectangles.size<font color="black">(</font><font color="black">)</font>;i<font color="black">+</font><font color="black">+</font><font color="black">)</font>
+         rectangles<font color="black">[</font>i<font color="black">]</font>.draw<font color="black">(</font><font color="black">)</font>;     
+     <font color="blue">for</font> <font color="black">(</font><font color="blue">int</font> i<font color="black">=</font><font color="maroon">0</font>;i<font color="black">&#60;</font>modeles.size<font color="black">(</font><font color="black">)</font>;i<font color="black">+</font><font color="black">+</font><font color="black">)</font>
+         modeles<font color="black">[</font>i<font color="black">]</font>.draw<font color="black">(</font><font color="black">)</font>;            
+<font color="black">}</font>
+
+<font color="blue">bool</font> Bloc<font color="black">:</font><font color="black">:</font>estIn<font color="black">(</font>Vertex posJoueur<font color="black">)</font> <font color="black">{</font>
+     <font color="blue">if</font><font color="black">(</font><font color="black">!</font>traversable<font color="black">)</font> <font color="blue">return</font> <font color="blue">false</font>;
+     <font color="blue">return</font> <font color="black">(</font> <font color="black">(</font>posJoueur.x <font color="black">&#62;</font> minX<font color="black">)</font> <font color="black">&</font><font color="black">&</font> <font color="black">(</font>posJoueur.z <font color="black">&#62;</font> minZ<font color="black">)</font> <font color="black">&</font><font color="black">&</font> <font color="black">(</font>posJoueur.x <font color="black">&#60;</font> maxX<font color="black">)</font> <font color="black">&</font><font color="black">&</font> <font color="black">(</font>posJoueur.z <font color="black">&#60;</font> maxZ<font color="black">)</font> <font color="black">)</font> ; 
+<font color="black">}</font>
+
+<font color="blue">bool</font> Bloc<font color="black">:</font><font color="black">:</font>estColision<font color="black">(</font>Vertex posJoueur<font color="black">)</font> <font color="black">{</font>
+    <font color="green">// return ((posJoueur.x &#60; minX) || (posJoueur.z &#60; minZ) || (posJoueur.x &#62; maxX) || (posJoueur.z &#62; maxZ));    </font>
+<font color="black">}</font>
+
+</PRE>
+</BODY>
+</HTML>

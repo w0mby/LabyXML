@@ -1,0 +1,2 @@
+cd Sources_et_executable
+call ChangeLvl.bat

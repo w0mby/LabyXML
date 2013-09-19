@@ -1,0 +1,39 @@
+<HTML>
+<HEAD>
+<TITLE>
+BlocObj.cpp
+</TITLE>
+</HEAD>
+<BODY>
+<PRE>
+<font color="blue">#include</font> <font color="maroon">"BlocObj.h"</font>
+
+BlocObj<font color="black">:</font><font color="black">:</font>BlocObj<font color="black">(</font>TiXmlElement<font color="black">*</font> _elements, Vertex _posElement, MapTex textures<font color="black">)</font> <font color="black">{</font>
+       posElement <font color="black">=</font> _posElement; 
+       Vertex posComposant;
+       TiXmlElement<font color="black">*</font> elem;
+       objetComplexe <font color="black">=</font> <font color="blue">new</font> Md2Object<font color="black">(</font><font color="black">(</font><font color="blue">char</font> <font color="black">*</font><font color="black">)</font>_elements<font color="black">-</font><font color="black">&#62;</font>Attribute<font color="black">(</font><font color="maroon">"model"</font><font color="black">)</font>,<font color="black">(</font><font color="blue">char</font> <font color="black">*</font><font color="black">)</font>_elements<font color="black">-</font><font color="black">&#62;</font>Attribute<font color="black">(</font><font color="maroon">"textModel"</font><font color="black">)</font><font color="black">)</font>;
+       _elements<font color="black">-</font><font color="black">&#62;</font>QueryFloatAttribute<font color="black">(</font><font color="maroon">"scale"</font>,<font color="black">&</font>scale<font color="black">)</font>;
+       elem <font color="black">=</font> _elements<font color="black">-</font><font color="black">&#62;</font>FirstChildElement<font color="black">(</font><font color="maroon">"rectangle"</font><font color="black">)</font>;
+       <font color="blue">while</font> <font color="black">(</font>elem<font color="black">)</font>
+       <font color="black">{</font>
+           rectangles.push_back<font color="black">(</font>Surface<font color="black">(</font>elem,textures<font color="black">)</font><font color="black">)</font>;
+           elem <font color="black">=</font> elem<font color="black">-</font><font color="black">&#62;</font>NextSiblingElement<font color="black">(</font><font color="maroon">"rectangle"</font><font color="black">)</font>; <font color="green">// iteration</font>
+       <font color="black">}</font>
+<font color="black">}</font>
+
+BlocObj<font color="black">:</font><font color="black">:</font>~BlocObj<font color="black">(</font><font color="black">)</font><font color="black">{</font>
+       <font color="green">// delete objetComplexe;            </font>
+<font color="black">}</font>
+
+<font color="blue">void</font> BlocObj<font color="black">:</font><font color="black">:</font>draw<font color="black">(</font><font color="black">)</font> <font color="black">{</font>
+     glTranslatef<font color="black">(</font>posElement.x,posElement.y,posElement.z<font color="black">)</font>;
+     <font color="blue">for</font> <font color="black">(</font><font color="blue">int</font> i<font color="black">=</font><font color="maroon">0</font>;i<font color="black">&#60;</font>rectangles.size<font color="black">(</font><font color="black">)</font>;i<font color="black">+</font><font color="black">+</font><font color="black">)</font>
+         rectangles<font color="black">[</font>i<font color="black">]</font>.draw<font color="black">(</font><font color="black">)</font>;     
+     <font color="green">//glTranslatef(0,0,0);              </font>
+     objetComplexe<font color="black">-</font><font color="black">&#62;</font>draw<font color="black">(</font>scale<font color="black">)</font>;
+<font color="black">}</font>
+
+</PRE>
+</BODY>
+</HTML>

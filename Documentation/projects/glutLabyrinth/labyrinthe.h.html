@@ -1,0 +1,72 @@
+<HTML>
+<HEAD>
+<TITLE>
+labyrinthe.h
+</TITLE>
+</HEAD>
+<BODY>
+<PRE>
+<font color="blue">#ifndef</font> __LABYRINTHE
+<font color="blue">#define</font> __LABYRINTHE
+
+<font color="blue">#include</font> <font color="maroon">&#60;stdlib.h&#62;</font>
+<font color="blue">#include</font> <font color="maroon">&#60;gl\gl.h&#62;</font>          <font color="green">// Header File For The OpenGL32 Library</font>
+<font color="blue">#include</font> <font color="maroon">&#60;gl\glu.h&#62;</font>         <font color="green">// Header File For The GLu32 Library</font>
+<font color="blue">#include</font> <font color="maroon">&#60;tinyxml.h&#62;</font>
+
+<font color="blue">#include</font> <font color="maroon">"Bloc.h"</font>
+<font color="blue">#include</font> <font color="maroon">"Composant.h"</font>
+<font color="blue">#include</font> <font color="maroon">&#60;vector&#62;</font>
+<font color="blue">#include</font> <font color="maroon">&#60;map&#62;</font>
+<font color="blue">#include</font> <font color="maroon">&#60;string&#62;</font>
+
+<font color="green">/**
+* Représente un monde constitué de Composant.
+* @see Composant
+* @author Damien Dormal, Bavay Jonathan & Amine Rebbouh
+*/</font>
+<font color="blue">class</font> Labyrinthe <font color="black">{</font>
+      <font color="blue">private</font><font color="black">:</font>
+              <font color="green">/** Représente le composant étant la fin du labyrinthe.*/</font>
+              Composant<font color="black">*</font> finLabyrinthe;
+              <font color="green">/** Représente le composant étant le début du Labyrinthe*/</font>
+              Composant<font color="black">*</font> debutLabyrinthe;
+              <font color="green">/** Tableau de Composant constituant l'entierté du Monde.*/</font>
+              vector<font color="black">&#60;</font>Composant<font color="black">*</font><font color="black">&#62;</font> elemComplexe;
+             
+      <font color="blue">public</font> <font color="black">:</font>
+             <font color="green">/**
+             * Construit le Monde à partir d'un fichier xml.
+             * @param nomFichier Fichier xml constituant le monde.
+             * @param _modeles Map contenant tout les modeles disponibles pour la creation du Monde.
+             * @param textures Map contenant toutes les textures disponibles pour la creation du Monde.
+             * @see &#60;a href="http://www.grinninglizard.com/tinyxmldocs/index.html"&#62;TiXml&#60;/a&#62;
+             */</font>
+             Labyrinthe<font color="black">(</font><font color="blue">char</font> <font color="black">*</font> nomFichier, MapModele <font color="black">&</font> _modeles,MapTex <font color="black">&</font> textures<font color="black">)</font>;
+             <font color="green">//~Labyrinthe();  //deleter tout les modele contenu dans la map.</font>
+             <font color="green">/**
+             * Dessine le labyrinthe. Ne fait qu'appeler la methode draw() de tout les composants constituant le Labyrinthe.
+             * @param posPerso Position de l'utilisateur.
+             * @param posVue Position de la vue de l'utilisateur.
+             * @see Composant
+             */</font>
+             <font color="blue">void</font> draw<font color="black">(</font>Vertex posPerso,Vertex posVue<font color="black">)</font>;
+             <font color="green">/**
+             * Determine si l'utilisateur est toujours positionner dans le labyrinthe.
+             * @param posJoueur position du joueur dans le monde.
+             * @return &#60;code&#62;true&#60;/code&#62; Si l'utilisateur est positionner dans le monde et &#60;code&#62;false&#60;/code&#62; sinon.
+             */</font>
+             <font color="blue">bool</font> estIn<font color="black">(</font>Vertex posJoueur<font color="black">)</font>;
+             <font color="green">/**
+             * Determine si l'utilisateur est sur le composant de fin.
+             * @return &#60;code&#62;true&#60;/code&#62; Si l'utilisateur est positionner dans le Composant de fin 
+             * et &#60;code&#62;false&#60;/code&#62; sinon.
+             */</font>
+             <font color="blue">bool</font> estFini<font color="black">(</font>Vertex posJoueur<font color="black">)</font>;
+<font color="black">}</font>;
+
+<font color="blue">#endif</font>
+
+</PRE>
+</BODY>
+</HTML>

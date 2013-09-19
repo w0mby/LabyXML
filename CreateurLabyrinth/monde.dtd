@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT monde (composant+)>
+<!ATTLIST monde 
+		longueur CDATA #IMPLIED
+		largeur CDATA  #IMPLIED>
+	<!ELEMENT composant (bloc+) >  
+	<!ATTLIST composant 
+		type CDATA #REQUIRED
+		x CDATA #REQUIRED
+		y CDATA #REQUIRED
+		z CDATA #REQUIRED >
+		<!ELEMENT bloc (rectangle+) >
+		<!ATTLIST bloc
+			x CDATA #REQUIRED
+			y CDATA #REQUIRED
+			z CDATA #REQUIRED>
+			<!ELEMENT rectangle (vertex+,coordTex+)>
+			<!ATTLIST rectangle
+				mur (true|false) #REQUIRED
+				sol (true|false) #REQUIRED
+				tex CDATA #REQUIRED >
+				<!ELEMENT vertex (#PCDATA) >
+				<!ATTLIST vertex
+					x CDATA #REQUIRED
+					y CDATA #REQUIRED
+					z CDATA #REQUIRED >
+				<!ELEMENT coordTex (#PCDATA) >
+				<!ATTLIST coordTex
+					x CDATA #REQUIRED
+					y CDATA #REQUIRED >

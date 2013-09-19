@@ -1,0 +1,114 @@
+<HTML>
+<HEAD>
+<TITLE>
+Md2Object.cpp
+</TITLE>
+</HEAD>
+<BODY>
+<PRE>
+<font color="blue">#include</font> <font color="maroon">"Md2Object.h"</font>
+
+Md2Object<font color="black">:</font><font color="black">:</font>Md2Object<font color="black">(</font><font color="blue">char</font> <font color="black">*</font> fichier<font color="black">)</font><font color="black">{</font>
+     FILE <font color="black">*</font>fp;
+     mdl <font color="black">=</font> <font color="black">(</font>md2_model_t <font color="black">*</font><font color="black">)</font>malloc <font color="black">(</font><font color="blue">sizeof</font> <font color="black">(</font>md2_model_t<font color="black">)</font><font color="black">)</font>;
+     <font color="blue">int</font> i;
+     fp <font color="black">=</font> fopen <font color="black">(</font>fichier, <font color="maroon">"rb"</font><font color="black">)</font>;
+     <font color="green">/* read header */</font>
+     fread <font color="black">(</font><font color="black">&</font>mdl<font color="black">-</font><font color="black">&#62;</font>header, <font color="maroon">1</font>, <font color="blue">sizeof</font> <font color="black">(</font>md2_header_t<font color="black">)</font>, fp<font color="black">)</font>;
+     <font color="green">/* memory allocation */</font>
+     mdl<font color="black">-</font><font color="black">&#62;</font>skins <font color="black">=</font> <font color="black">(</font>md2_skin_t <font color="black">*</font><font color="black">)</font>malloc <font color="black">(</font><font color="blue">sizeof</font> <font color="black">(</font>md2_skin_t<font color="black">)</font> <font color="black">*</font> mdl<font color="black">-</font><font color="black">&#62;</font>header.num_skins<font color="black">)</font>;
+     mdl<font color="black">-</font><font color="black">&#62;</font>texcoords <font color="black">=</font> <font color="black">(</font>md2_texCoord_t <font color="black">*</font><font color="black">)</font>malloc <font color="black">(</font><font color="blue">sizeof</font> <font color="black">(</font>md2_texCoord_t<font color="black">)</font> <font color="black">*</font> mdl<font color="black">-</font><font color="black">&#62;</font>header.num_st<font color="black">)</font>;
+     mdl<font color="black">-</font><font color="black">&#62;</font>triangles <font color="black">=</font> <font color="black">(</font>md2_triangle_t <font color="black">*</font><font color="black">)</font>malloc <font color="black">(</font><font color="blue">sizeof</font> <font color="black">(</font>md2_triangle_t<font color="black">)</font> <font color="black">*</font> mdl<font color="black">-</font><font color="black">&#62;</font>header.num_tris<font color="black">)</font>;
+     mdl<font color="black">-</font><font color="black">&#62;</font>frames <font color="black">=</font> <font color="black">(</font>md2_frame_t <font color="black">*</font><font color="black">)</font>malloc <font color="black">(</font><font color="blue">sizeof</font><font color="black">(</font>md2_frame_t<font color="black">)</font> <font color="black">*</font> mdl<font color="black">-</font><font color="black">&#62;</font>header.num_frames<font color="black">)</font>;
+     mdl<font color="black">-</font><font color="black">&#62;</font>glcmds <font color="black">=</font> <font color="black">(</font><font color="blue">int</font> <font color="black">*</font><font color="black">)</font>malloc <font color="black">(</font><font color="blue">sizeof</font> <font color="black">(</font><font color="blue">int</font><font color="black">)</font> <font color="black">*</font> mdl<font color="black">-</font><font color="black">&#62;</font>header.num_glcmds<font color="black">)</font>;
+     fseek <font color="black">(</font>fp, mdl<font color="black">-</font><font color="black">&#62;</font>header.offset_st, SEEK_SET<font color="black">)</font>;
+     fread <font color="black">(</font>mdl<font color="black">-</font><font color="black">&#62;</font>texcoords, <font color="blue">sizeof</font> <font color="black">(</font>md2_texCoord_t<font color="black">)</font>, mdl<font color="black">-</font><font color="black">&#62;</font>header.num_st, fp<font color="black">)</font>;
+     fseek <font color="black">(</font>fp, mdl<font color="black">-</font><font color="black">&#62;</font>header.offset_tris, SEEK_SET<font color="black">)</font>;
+     fread <font color="black">(</font>mdl<font color="black">-</font><font color="black">&#62;</font>triangles, <font color="blue">sizeof</font> <font color="black">(</font>md2_triangle_t<font color="black">)</font>, mdl<font color="black">-</font><font color="black">&#62;</font>header.num_tris, fp<font color="black">)</font>;
+     fseek <font color="black">(</font>fp, mdl<font color="black">-</font><font color="black">&#62;</font>header.offset_glcmds, SEEK_SET<font color="black">)</font>;
+     fread <font color="black">(</font>mdl<font color="black">-</font><font color="black">&#62;</font>glcmds, <font color="blue">sizeof</font> <font color="black">(</font><font color="blue">int</font><font color="black">)</font>, mdl<font color="black">-</font><font color="black">&#62;</font>header.num_glcmds, fp<font color="black">)</font>;
+     <font color="green">/* read frames */</font>
+     fseek <font color="black">(</font>fp, mdl<font color="black">-</font><font color="black">&#62;</font>header.offset_frames, SEEK_SET<font color="black">)</font>;
+     <font color="blue">for</font> <font color="black">(</font>i <font color="black">=</font> <font color="maroon">0</font>; i <font color="black">&#60;</font> mdl<font color="black">-</font><font color="black">&#62;</font>header.num_frames; <font color="black">+</font><font color="black">+</font>i<font color="black">)</font><font color="black">{</font>
+         <font color="green">/* memory allocation for vertices of this frame */</font>
+         mdl<font color="black">-</font><font color="black">&#62;</font>frames<font color="black">[</font>i<font color="black">]</font>.verts <font color="black">=</font> <font color="black">(</font>md2_vertex_t <font color="black">*</font><font color="black">)</font>
+         malloc <font color="black">(</font><font color="blue">sizeof</font> <font color="black">(</font>md2_vertex_t<font color="black">)</font> <font color="black">*</font> mdl<font color="black">-</font><font color="black">&#62;</font>header.num_vertices<font color="black">)</font>;
+         <font color="green">/* read frame data */</font>
+         fread <font color="black">(</font>mdl<font color="black">-</font><font color="black">&#62;</font>frames<font color="black">[</font>i<font color="black">]</font>.scale, <font color="blue">sizeof</font> <font color="black">(</font>vec3_t<font color="black">)</font>, <font color="maroon">1</font>, fp<font color="black">)</font>;
+         fread <font color="black">(</font>mdl<font color="black">-</font><font color="black">&#62;</font>frames<font color="black">[</font>i<font color="black">]</font>.translate, <font color="blue">sizeof</font> <font color="black">(</font>vec3_t<font color="black">)</font>, <font color="maroon">1</font>, fp<font color="black">)</font>;
+         fread <font color="black">(</font>mdl<font color="black">-</font><font color="black">&#62;</font>frames<font color="black">[</font>i<font color="black">]</font>.<font color="blue">name</font>, <font color="blue">sizeof</font> <font color="black">(</font><font color="blue">char</font><font color="black">)</font>, <font color="maroon">16</font>, fp<font color="black">)</font>;
+         fread <font color="black">(</font>mdl<font color="black">-</font><font color="black">&#62;</font>frames<font color="black">[</font>i<font color="black">]</font>.verts, <font color="blue">sizeof</font> <font color="black">(</font>md2_vertex_t<font color="black">)</font>, mdl<font color="black">-</font><font color="black">&#62;</font>header.num_vertices, fp<font color="black">)</font>;
+     <font color="black">}</font>
+     fclose <font color="black">(</font>fp<font color="black">)</font>;
+<font color="black">}</font>
+
+Md2Object<font color="black">:</font><font color="black">:</font>~Md2Object<font color="black">(</font><font color="black">)</font><font color="black">{</font>
+     <font color="blue">int</font> i;
+     <font color="blue">if</font> <font color="black">(</font>mdl<font color="black">-</font><font color="black">&#62;</font>skins<font color="black">)</font><font color="black">{</font>
+        free <font color="black">(</font>mdl<font color="black">-</font><font color="black">&#62;</font>skins<font color="black">)</font>;
+        mdl<font color="black">-</font><font color="black">&#62;</font>skins <font color="black">=</font> NULL;
+     <font color="black">}</font>
+     <font color="blue">if</font> <font color="black">(</font>mdl<font color="black">-</font><font color="black">&#62;</font>texcoords<font color="black">)</font><font color="black">{</font>
+        free <font color="black">(</font>mdl<font color="black">-</font><font color="black">&#62;</font>texcoords<font color="black">)</font>;
+        mdl<font color="black">-</font><font color="black">&#62;</font>texcoords <font color="black">=</font> NULL;
+     <font color="black">}</font>
+     <font color="blue">if</font> <font color="black">(</font>mdl<font color="black">-</font><font color="black">&#62;</font>triangles<font color="black">)</font><font color="black">{</font>
+        free <font color="black">(</font>mdl<font color="black">-</font><font color="black">&#62;</font>triangles<font color="black">)</font>;
+        mdl<font color="black">-</font><font color="black">&#62;</font>triangles <font color="black">=</font> NULL;
+     <font color="black">}</font>
+     <font color="blue">if</font> <font color="black">(</font>mdl<font color="black">-</font><font color="black">&#62;</font>glcmds<font color="black">)</font><font color="black">{</font>
+        free <font color="black">(</font>mdl<font color="black">-</font><font color="black">&#62;</font>glcmds<font color="black">)</font>;
+        mdl<font color="black">-</font><font color="black">&#62;</font>glcmds <font color="black">=</font> NULL;
+     <font color="black">}</font>
+     <font color="blue">if</font> <font color="black">(</font>mdl<font color="black">-</font><font color="black">&#62;</font>frames<font color="black">)</font><font color="black">{</font>
+        <font color="blue">for</font> <font color="black">(</font>i <font color="black">=</font> <font color="maroon">0</font>; i <font color="black">&#60;</font> mdl<font color="black">-</font><font color="black">&#62;</font>header.num_frames; <font color="black">+</font><font color="black">+</font>i<font color="black">)</font><font color="black">{</font>
+            free <font color="black">(</font>mdl<font color="black">-</font><font color="black">&#62;</font>frames<font color="black">[</font>i<font color="black">]</font>.verts<font color="black">)</font>;
+            mdl<font color="black">-</font><font color="black">&#62;</font>frames<font color="black">[</font>i<font color="black">]</font>.verts <font color="black">=</font> NULL;
+        <font color="black">}</font>
+        free <font color="black">(</font>mdl<font color="black">-</font><font color="black">&#62;</font>frames<font color="black">)</font>;
+        mdl<font color="black">-</font><font color="black">&#62;</font>frames <font color="black">=</font> NULL;
+     <font color="black">}</font>
+     <font color="green">//free(mdl);</font>
+    <font color="green">// mdl = NULL;</font>
+<font color="black">}</font>
+
+<font color="blue">void</font> Md2Object<font color="black">:</font><font color="black">:</font>draw<font color="black">(</font><font color="blue">float</font> scale,<font color="blue">float</font> rotation, Vertex posObjet<font color="black">)</font><font color="black">{</font>
+  <font color="blue">int</font> i, j;
+  GLfloat s, t;
+  vec3_t v;
+  md2_frame_t <font color="black">*</font>pframe;
+  md2_vertex_t <font color="black">*</font>pvert;
+  <font color="green">//active la texture en attribut comme texture courante.</font>
+  glBindTexture <font color="black">(</font>GL_TEXTURE_2D, texture<font color="black">)</font>;
+  <font color="green">//dessine le modele</font>
+  glPushMatrix<font color="black">(</font><font color="black">)</font>;               <font color="green">//Sauvegarde de la matrice avant toutes les modifications</font>
+  glTranslatef<font color="black">(</font>posObjet.x,posObjet.y,posObjet.z<font color="black">)</font>;
+  glScalef<font color="black">(</font>scale,scale,scale<font color="black">)</font>;
+  glRotatef<font color="black">(</font>rotation,<font color="maroon">0</font>,<font color="maroon">1</font>,<font color="maroon">0</font><font color="black">)</font>;
+  glRotatef<font color="black">(</font><font color="maroon">-90</font>,<font color="maroon">1</font>,<font color="maroon">0</font>,<font color="maroon">0</font><font color="black">)</font>;       <font color="green">//le modele semble enregistré avec un dephasage de 90° dans le fichier</font>
+  glBegin <font color="black">(</font>GL_TRIANGLES<font color="black">)</font>;
+    <font color="green">//dessine chaque triangle</font>
+    <font color="blue">for</font> <font color="black">(</font>i <font color="black">=</font> <font color="maroon">0</font>; i <font color="black">&#60;</font> mdl<font color="black">-</font><font color="black">&#62;</font>header.num_tris; <font color="black">+</font><font color="black">+</font>i<font color="black">)</font><font color="black">{</font>
+       <font color="green">//dessine chaque vertex</font>
+       <font color="blue">for</font> <font color="black">(</font>j <font color="black">=</font> <font color="maroon">0</font>; j <font color="black">&#60;</font> <font color="maroon">3</font>; <font color="black">+</font><font color="black">+</font>j<font color="black">)</font><font color="black">{</font>
+           pframe <font color="black">=</font> <font color="black">&</font>mdl<font color="black">-</font><font color="black">&#62;</font>frames<font color="black">[</font><font color="maroon">0</font><font color="black">]</font>;
+           pvert <font color="black">=</font> <font color="black">&</font>pframe<font color="black">-</font><font color="black">&#62;</font>verts<font color="black">[</font>mdl<font color="black">-</font><font color="black">&#62;</font>triangles<font color="black">[</font>i<font color="black">]</font>.vertex<font color="black">[</font>j<font color="black">]</font><font color="black">]</font>;
+           <font color="green">// recuperer les coordonnée de la texture à appliqué</font>
+           s <font color="black">=</font> <font color="black">(</font>GLfloat<font color="black">)</font>mdl<font color="black">-</font><font color="black">&#62;</font>texcoords<font color="black">[</font>mdl<font color="black">-</font><font color="black">&#62;</font>triangles<font color="black">[</font>i<font color="black">]</font>.st<font color="black">[</font>j<font color="black">]</font><font color="black">]</font>.s <font color="black">/</font> mdl<font color="black">-</font><font color="black">&#62;</font>header.skinwidth;
+           t <font color="black">=</font> <font color="black">(</font>GLfloat<font color="black">)</font>mdl<font color="black">-</font><font color="black">&#62;</font>texcoords<font color="black">[</font>mdl<font color="black">-</font><font color="black">&#62;</font>triangles<font color="black">[</font>i<font color="black">]</font>.st<font color="black">[</font>j<font color="black">]</font><font color="black">]</font>.t <font color="black">/</font> mdl<font color="black">-</font><font color="black">&#62;</font>header.skinheight;
+           <font color="green">// passe les coordonnées de la texture à OpenGL</font>
+           glTexCoord2f <font color="black">(</font>s, t<font color="black">)</font>;
+           <font color="green">// calcul la position réel du vertex</font>
+           v<font color="black">[</font><font color="maroon">0</font><font color="black">]</font> <font color="black">=</font> <font color="black">(</font>pframe<font color="black">-</font><font color="black">&#62;</font>scale<font color="black">[</font><font color="maroon">0</font><font color="black">]</font> <font color="black">*</font> pvert<font color="black">-</font><font color="black">&#62;</font>v<font color="black">[</font><font color="maroon">0</font><font color="black">]</font><font color="black">)</font> <font color="black">+</font> pframe<font color="black">-</font><font color="black">&#62;</font>translate<font color="black">[</font><font color="maroon">0</font><font color="black">]</font>;
+           v<font color="black">[</font><font color="maroon">1</font><font color="black">]</font> <font color="black">=</font> <font color="black">(</font>pframe<font color="black">-</font><font color="black">&#62;</font>scale<font color="black">[</font><font color="maroon">1</font><font color="black">]</font> <font color="black">*</font> pvert<font color="black">-</font><font color="black">&#62;</font>v<font color="black">[</font><font color="maroon">1</font><font color="black">]</font><font color="black">)</font> <font color="black">+</font> pframe<font color="black">-</font><font color="black">&#62;</font>translate<font color="black">[</font><font color="maroon">1</font><font color="black">]</font>;
+           v<font color="black">[</font><font color="maroon">2</font><font color="black">]</font> <font color="black">=</font> <font color="black">(</font>pframe<font color="black">-</font><font color="black">&#62;</font>scale<font color="black">[</font><font color="maroon">2</font><font color="black">]</font> <font color="black">*</font> pvert<font color="black">-</font><font color="black">&#62;</font>v<font color="black">[</font><font color="maroon">2</font><font color="black">]</font><font color="black">)</font> <font color="black">+</font> pframe<font color="black">-</font><font color="black">&#62;</font>translate<font color="black">[</font><font color="maroon">2</font><font color="black">]</font>;
+           glVertex3fv <font color="black">(</font>v<font color="black">)</font>;
+        <font color="black">}</font>
+      <font color="black">}</font>
+  glEnd <font color="black">(</font><font color="black">)</font>;
+  glPopMatrix<font color="black">(</font><font color="black">)</font>;
+<font color="black">}</font>
+
+</PRE>
+</BODY>
+</HTML>

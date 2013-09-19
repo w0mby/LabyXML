@@ -1,0 +1,3461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE monde SYSTEM "http://womby.zapto.org/monde.dtd">
+<monde largeur="25" longueur="25">
+	<composant x="0" y="0" z="0" type="CulDeSacHorizontale2">
+		<bloc x="0" y="0" z="0" traversable ="1">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond1.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<modele nom="luminaire1.md2" textModele="metal.bmp" rotation="0.0" scale="0.02" x="-1.5" y="1.3" z="0.0" lampe="1"/>
+			<modele nom="chaise.md2" textModele="bois.bmp" rotation="90.0" scale="0.008" x="0.0" y="-1.0" z="0.0" lampe="0"/>
+		</bloc>
+	</composant>
+	<composant x="8" y="0" z="0" type="T1">
+		<bloc x="0" y="0" z="0" >
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<modele nom="tableau.md2" textModele="mona_lisa.bmp" rotation="0.0" scale="0.008" x="0.0" y="-0.4" z="2.02"/>
+		</bloc>
+		<bloc x="0" y="0" z="-4">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="-2" y="-1" z="-2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond1.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="0" y="1" />
+				<coordTex x="1" y="1" />
+				<coordTex x="1" y="0" />
+				<coordTex x="0" y="0" />
+			</rectangle>
+		</bloc>
+		<bloc x="4" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+		</bloc>
+		<bloc x="-4" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+		</bloc>
+	</composant>
+	<composant x="20" y="0" z="0" type="GrandCouloirHorizontale">
+		<bloc x="0" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+		</bloc>
+		<bloc x="-4" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+		</bloc>
+		<bloc x="4" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+		</bloc>
+	</composant>
+	<composant x="28" y="0" z="0" type="CulDeSacHorizontale1">
+		<bloc x="0" y="0" z="0" traversable ="1">
+			<modele nom="Ogros.md2" textModele="metal.bmp" rotation="180" scale="0.04" x="1" y="0" z="1"/>
+			<modele nom="Ogros.md2" textModele="pierre.bmp" rotation="180" scale="0.04" x="-1" y="0" z="0"/>
+			<modele nom="Ogros.md2" textModele="bois.bmp" rotation="180" scale="0.04" x="1" y="0" z="-1"/>
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+		</bloc>
+	</composant>
+	<composant x="8" y="0" z="-8" type="PetitcouloirVerticale">
+		<bloc x="0" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="-2" y="-1" z="-2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="0" y="1" />
+				<coordTex x="1" y="1" />
+				<coordTex x="1" y="0" />
+				<coordTex x="0" y="0" />
+			</rectangle>
+		</bloc>
+	</composant>
+	<composant x="8" y="0" z="-16" type="T3">
+		<bloc x="0" y="0" z="0">
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="0" y="1" />
+				<coordTex x="1" y="1" />
+				<coordTex x="1" y="0" />
+				<coordTex x="0" y="0" />
+			</rectangle>
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+		<modele nom="tableau1-28.md2" textModele="bosh.bmp" rotation="90" scale="0.01" x="-2.02" y="0" z="0"/>
+		</bloc>
+		
+		<bloc x="0" y="0" z="4">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="-2" y="-1" z="-2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="0" y="1" />
+				<coordTex x="1" y="1" />
+				<coordTex x="1" y="0" />
+				<coordTex x="0" y="0" />
+			</rectangle>
+		</bloc>
+		<bloc x="0" y="0" z="-4">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="-2" y="-1" z="-2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="0" y="1" />
+				<coordTex x="1" y="1" />
+				<coordTex x="1" y="0" />
+				<coordTex x="0" y="0" />
+			</rectangle>
+		</bloc>
+		<bloc x="4" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+		</bloc>
+	</composant>
+	<composant x="20" y="0" z="-16" type="GrandCouloirHorizontale">
+		<bloc x="0" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+		</bloc>
+		<bloc x="-4" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+		</bloc>
+		<bloc x="4" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+		</bloc>
+	</composant>
+	<composant x="28" y="0" z="-16" type="CulDeSacHorizontale1">
+		<bloc x="0" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+		</bloc>
+	</composant>
+	<composant x="8" y="0" z="-24" type="PetitcouloirVerticale">
+		<bloc x="0" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="-2" y="-1" z="-2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="0" y="1" />
+				<coordTex x="1" y="1" />
+				<coordTex x="1" y="0" />
+				<coordTex x="0" y="0" />
+			</rectangle>
+		</bloc>
+	</composant>
+	<composant x="8" y="0" z="-32" type="TournantDroite">
+		<bloc x="0" y="0" z="0">
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+		</bloc>
+		<bloc x="0" y="0" z="4">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="-2" y="-1" z="-2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="0" y="1" />
+				<coordTex x="1" y="1" />
+				<coordTex x="1" y="0" />
+				<coordTex x="0" y="0" />
+			</rectangle>
+		</bloc>
+		<bloc x="4" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+		</bloc>
+	</composant>
+	<composant x="20" y="0" z="-32" type="GrandCouloirHorizontale">
+		<bloc x="0" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+		</bloc>
+		<bloc x="-4" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+		</bloc>
+		<bloc x="4" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+		</bloc>
+	</composant>
+	<composant x="28" y="0" z="-32" type="PetitCouloirHorizontale">
+		<bloc x="0" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+		</bloc>
+	</composant>
+	<composant x="36" y="0" z="-32" type="GrandCouloirHorizontale">
+		<bloc x="0" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+		</bloc>
+		<bloc x="-4" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+		</bloc>
+		<bloc x="4" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+		</bloc>
+	</composant>
+	<composant x="48" y="0" z="-32" type="T2">
+		<bloc x="0" y="0" z="0">
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+		</bloc>
+		<bloc x="0" y="0" z="4">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="-2" y="-1" z="-2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="0" y="1" />
+				<coordTex x="1" y="1" />
+				<coordTex x="1" y="0" />
+				<coordTex x="0" y="0" />
+			</rectangle>
+		</bloc>
+		<bloc x="4" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+		</bloc>
+		<bloc x="-4" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+		</bloc>
+	</composant>
+	<composant x="56" y="0" z="-32" type="PetitCouloirHorizontale">
+		<bloc x="0" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+		</bloc>
+	</composant>
+	<composant x="60" y="0" z="-32" type="PetitCouloirHorizontale">
+		<bloc x="0" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+		</bloc>
+	</composant>
+	<composant x="48" y="0" z="-24" type="PetitcouloirVerticale">
+		<bloc x="0" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="-2" y="-1" z="-2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="0" y="1" />
+				<coordTex x="1" y="1" />
+				<coordTex x="1" y="0" />
+				<coordTex x="0" y="0" />
+			</rectangle>
+		</bloc>
+	</composant>
+	<composant x="48" y="0" z="-16" type="TournantHaut">
+		<bloc x="0" y="0" z="0">
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+		</bloc>
+		<bloc x="0" y="0" z="-4">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="-2" y="-1" z="-2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="0" y="1" />
+				<coordTex x="1" y="1" />
+				<coordTex x="1" y="0" />
+				<coordTex x="0" y="0" />
+			</rectangle>
+		</bloc>
+		<bloc x="4" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+		</bloc>
+	</composant>
+	<composant x="56" y="0" z="-16" type="PetitCouloirHorizontale">
+		<bloc x="0" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+		</bloc>
+	</composant>
+	<composant x="64" y="0" z="-16" type="TournantBas">
+		<bloc x="0" y="0" z="0">
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+		</bloc>
+		<bloc x="0" y="0" z="4">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="-2" y="-1" z="-2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="0" y="1" />
+				<coordTex x="1" y="1" />
+				<coordTex x="1" y="0" />
+				<coordTex x="0" y="0" />
+			</rectangle>
+		</bloc>
+		<bloc x="-4" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+		</bloc>
+	</composant>
+	<composant x="64" y="0" z="-8" type="PetitcouloirVerticale">
+		<bloc x="0" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="-2" y="-1" z="-2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="0" y="1" />
+				<coordTex x="1" y="1" />
+				<coordTex x="1" y="0" />
+				<coordTex x="0" y="0" />
+			</rectangle>
+		</bloc>
+	</composant>
+	<composant x="64" y="0" z="0" type="T1">
+		<bloc x="0" y="0" z="0">
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+		</bloc>
+		<bloc x="0" y="0" z="-4">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="-2" y="-1" z="-2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="0" y="1" />
+				<coordTex x="1" y="1" />
+				<coordTex x="1" y="0" />
+				<coordTex x="0" y="0" />
+			</rectangle>
+		</bloc>
+		<bloc x="4" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+		</bloc>
+		<bloc x="-4" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+		</bloc>
+	</composant>
+	<composant x="56" y="0" z="0" type="PetitCouloirHorizontale">
+		<bloc x="0" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+		</bloc>
+	</composant>
+	<composant x="52" y="0" z="0" type="PetitCouloirHorizontale">
+		<bloc x="0" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+		</bloc>
+	</composant>
+	<composant x="48" y="0" z="0" type="CulDeSacHorizontale2">
+		<bloc x="0" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+		</bloc>
+	</composant>
+	<composant x="76" y="0" z="0" type="GrandCouloirHorizontale">
+		<bloc x="0" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+		</bloc>
+		<bloc x="-4" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+		</bloc>
+		<bloc x="4" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+		</bloc>
+	</composant>
+	<composant x="88" y="0" z="0" type="T1">
+		<bloc x="0" y="0" z="0">
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+		</bloc>
+		<bloc x="0" y="0" z="-4">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="-2" y="-1" z="-2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="0" y="1" />
+				<coordTex x="1" y="1" />
+				<coordTex x="1" y="0" />
+				<coordTex x="0" y="0" />
+			</rectangle>
+		</bloc>
+		<bloc x="4" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+		</bloc>
+		<bloc x="-4" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+		</bloc>
+	</composant>
+	<composant x="96" y="0" z="0" type="CulDeSacHorizontale1">
+		<bloc x="0" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+		</bloc>
+	</composant>
+	<composant x="88" y="0" z="-12" type="GrandcouloirVerticale">
+		<bloc x="0" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="-2" y="-1" z="-2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="0" y="1" />
+				<coordTex x="1" y="1" />
+				<coordTex x="1" y="0" />
+				<coordTex x="0" y="0" />
+			</rectangle>
+		</bloc>
+		<bloc x="0" y="0" z="4">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="-2" y="-1" z="-2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="0" y="1" />
+				<coordTex x="1" y="1" />
+				<coordTex x="1" y="0" />
+				<coordTex x="0" y="0" />
+			</rectangle>
+		</bloc>
+		<bloc x="0" y="0" z="-4">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="-2" y="-1" z="-2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="0" y="1" />
+				<coordTex x="1" y="1" />
+				<coordTex x="1" y="0" />
+				<coordTex x="0" y="0" />
+			</rectangle>
+		</bloc>
+	</composant>
+	<composant x="88" y="0" z="-20" type="PetitcouloirVerticale">
+		<bloc x="0" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="-2" y="-1" z="-2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="0" y="1" />
+				<coordTex x="1" y="1" />
+				<coordTex x="1" y="0" />
+				<coordTex x="0" y="0" />
+			</rectangle>
+		</bloc>
+	</composant>
+	<composant x="88" y="0" z="-24" type="PetitcouloirVerticale">
+		<bloc x="0" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="-2" y="-1" z="-2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="0" y="1" />
+				<coordTex x="1" y="1" />
+				<coordTex x="1" y="0" />
+				<coordTex x="0" y="0" />
+			</rectangle>
+		</bloc>
+	</composant>
+	<composant x="88" y="0" z="-32" type="T2">
+		<bloc x="0" y="0" z="0">
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+		</bloc>
+		<bloc x="0" y="0" z="4">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="-2" y="-1" z="-2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="0" y="1" />
+				<coordTex x="1" y="1" />
+				<coordTex x="1" y="0" />
+				<coordTex x="0" y="0" />
+			</rectangle>
+		</bloc>
+		<bloc x="4" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+		</bloc>
+		<bloc x="-4" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+		</bloc>
+	</composant>
+	<composant x="96" y="0" z="-32" type="CulDeSacHorizontale1">
+		<bloc x="0" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+		</bloc>
+	</composant>
+	<composant x="76" y="0" z="-32" type="salle3x3">
+		<bloc x="0" y="0" z="0" traverse="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<modele nom="table.md2" textModele="bois.bmp" rotation="0" scale="0.008" x="0" y="-0.3" z="0"/>
+			<modele nom="Ogros.md2" textModele="pierre.bmp" rotation="0" scale="0.018" x="0" y="0.5" z="0"/>
+			<modele nom="chaise.md2" textModele="bois.bmp" rotation="0" scale="0.007" x="0" y="-1" z="-1"/>
+			<modele nom="chaise.md2" textModele="bois.bmp" rotation="90" scale="0.007" x="-1" y="-1" z="0"/>
+			<modele nom="chaise.md2" textModele="bois.bmp" rotation="-90" scale="0.007" x="1" y="-1" z="0"/>
+			<modele nom="chaise.md2" textModele="bois.bmp" rotation="180" scale="0.007" x="0" y="-1" z="1"/>
+
+		</bloc>
+		<bloc x="-4" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+		</bloc>
+		<bloc x="4" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+		</bloc>
+		<bloc x="0" y="0" z="-4">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+		</bloc>
+		<bloc x="0" y="0" z="4">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+		</bloc>
+		<bloc x="4" y="0" z="4">
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+		</bloc>
+		<bloc x="4" y="0" z="-4">
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+		</bloc>
+		<bloc x="-4" y="0" z="-4">
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+		</bloc>
+		<bloc x="-4" y="0" z="4">
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+		</bloc>
+	</composant>
+	<composant x="68" y="0" z="-32" type="PetitCouloirHorizontale">
+		<bloc x="0" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+		</bloc>
+	</composant>
+	<composant x="64" y="0" z="-32" type="PetitCouloirHorizontale">
+		<bloc x="0" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+		</bloc>
+	</composant>
+	<composant x="76" y="0" z="-24" type="CulDeSacVerticale1">
+		<bloc x="0" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="2" />	
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="2" z="2" />	
+				<vertex x="-2" y="2" z="-2" />	
+				<vertex x="-2" y="-1" z="-2" />	
+				<vertex x="-2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="2" y="2" z="2" />	
+				<vertex x="2" y="2" z="-2" />	
+				<vertex x="2" y="-1" z="-2" />	
+				<vertex x="2" y="-1" z="2" />	
+				<coordTex x="1" y="1" />
+				<coordTex x="0" y="1" />
+				<coordTex x="0" y="0" />
+				<coordTex x="1" y="0" />
+			</rectangle>
+			<modele nom="tableau1-28.md2" textModele="van-gogh_soleils.bmp" rotation="0.0" scale="0.01" x="0.0" y="0.0" z="1.98"/>
+		</bloc>
+	</composant>
+	<composant x="76" y="0" z="-40" type="CulDeSacVerticale2">
+		<bloc x="0" y="0" z="0">
+			<rectangle tex="sol_pave2.bmp" mur="false" sol="true">
+				<vertex x="-2" y="-1" z="-2"/>	
+				<vertex x="2" y="-1" z="-2"/>	
+				<vertex x="2" y="-1" z="2"/>	
+				<vertex x="-2" y="-1" z="2"/>	
+				<coordTex x="1" y="1"/>
+				<coordTex x="0" y="1"/>
+				<coordTex x="0" y="0"/>
+				<coordTex x="1" y="0"/>
+			</rectangle>
+			<rectangle tex="plafond.bmp" mur="false" sol="false">
+				<vertex x="-2" y="2" z="-2"/>	
+				<vertex x="2" y="2" z="-2"/>	
+				<vertex x="2" y="2" z="2"/>	
+				<vertex x="-2" y="2" z="2"/>	
+				<coordTex x="0" y="0"/>
+				<coordTex x="1" y="0"/>
+				<coordTex x="1" y="1"/>
+				<coordTex x="0" y="1"/>
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="-1" z="-2"/>	
+				<vertex x="2" y="-1" z="-2"/>	
+				<vertex x="2" y="2" z="-2"/>	
+				<vertex x="-2" y="2" z="-2"/>	
+				<coordTex x="0" y="0"/>
+				<coordTex x="1" y="0"/>
+				<coordTex x="1" y="1"/>
+				<coordTex x="0" y="1"/>
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="-2" y="2" z="2"/>	
+				<vertex x="-2" y="2" z="-2"/>	
+				<vertex x="-2" y="-1" z="-2"/>	
+				<vertex x="-2" y="-1" z="2"/>	
+				<coordTex x="1" y="1"/>
+				<coordTex x="0" y="1"/>
+				<coordTex x="0" y="0"/>
+				<coordTex x="1" y="0"/>
+			</rectangle>
+			<rectangle tex="MurGRis.bmp" mur="true" sol="false">
+				<vertex x="2" y="2" z="2"/>	
+				<vertex x="2" y="2" z="-2"/>	
+				<vertex x="2" y="-1" z="-2"/>	
+				<vertex x="2" y="-1" z="2"/>	
+				<coordTex x="1" y="1"/>
+				<coordTex x="0" y="1"/>
+				<coordTex x="0" y="0"/>
+				<coordTex x="1" y="0"/>
+			</rectangle>
+			<modele nom="tableau1-28.md2" textModele="van-gogh-cottages.bmp" rotation="0" scale="0.01" x="0.0" y="0.0" z="-1.98"/>
+		</bloc>
+	</composant>
+</monde>
